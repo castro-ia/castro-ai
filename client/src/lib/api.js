@@ -1,4 +1,7 @@
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8787';
+// Sin VITE_API_URL (caso de producción), usa rutas relativas: el mismo server Express
+// sirve el build del client y la API en el mismo origen, así que "/api/..." ya alcanza.
+// VITE_API_URL solo hace falta en desarrollo local, donde client y server corren en puertos separados.
+const API_URL = import.meta.env.VITE_API_URL || '';
 
 /**
  * Manda la conversación al backend y consume la respuesta en streaming (SSE sobre POST).
