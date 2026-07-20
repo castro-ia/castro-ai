@@ -39,10 +39,16 @@ function validateBody(body) {
 }
 
 function friendlyError(err) {
+  // El body de error de Anthropic viene anidado: { type, error: { type, message } }.
+  const anthropicMessage = err?.error?.error?.message || err?.error?.message;
+
   if (err?.status === 401) return 'La API key configurada no es válida.';
+  if (anthropicMessage?.toLowerCase().includes('credit balance is too low')) {
+    return 'Tu cuenta de Anthropic se quedó sin crédito. Cargá saldo en console.anthropic.com → Plans & Billing.';
+  }
   if (err?.status === 429) return 'Se alcanzó el límite de uso de la API de Anthropic. Probá de nuevo en unos minutos.';
   if (err?.status >= 500) return 'La API de Anthropic no está disponible en este momento. Probá de nuevo en unos minutos.';
-  return err?.error?.message || err?.message || 'Error inesperado al llamar a la API de Anthropic.';
+  return anthropicMessage || err?.message || 'Error inesperado al llamar a la API de Anthropic.';
 }
 
 router.post('/', async (req, res) => {
