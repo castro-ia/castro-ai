@@ -1,11 +1,10 @@
 import { NavLink } from 'react-router-dom';
-import { X, MessagesSquare, Home, Users, CheckSquare, Settings } from 'lucide-react';
+import { X, CalendarDays, Home, CheckSquare, Settings } from 'lucide-react';
 import { brand } from '../../config/brand';
 
 const ITEMS = [
-  { to: '/equipo', label: 'Equipo', icon: MessagesSquare, primary: true },
-  { to: '/', label: 'Inicio', icon: Home, end: true },
-  { to: '/crm', label: 'CRM', icon: Users },
+  { to: '/', label: 'Inicio', icon: Home, end: true, primary: true },
+  { to: '/calendario', label: 'Calendario', icon: CalendarDays },
   { to: '/tareas', label: 'Tareas', icon: CheckSquare },
 ];
 

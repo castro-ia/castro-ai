@@ -5,20 +5,13 @@
  *  - prelistings: número de prelistings del mes (del sync de Calendar)
  *  - captaciones: número de captaciones del mes
  *  - benchmark: default 46
- *  - onTalkToCEO: callback para navegar al chat del Equipo (opcional).
- *                 Si lo pasás, el mensaje de alerta trae botón directo al CEO.
  *
  * Lógica del semáforo:
  *  🟢 verde:    conversión >= benchmark
  *  🟡 amarillo: hasta 8 puntos abajo del benchmark
- *  🔴 rojo:     más de 8 puntos abajo → aparece mensaje del CEO
+ *  🔴 rojo:     más de 8 puntos abajo
  */
-export default function ConversionSemaforo({
-  prelistings = 0,
-  captaciones = 0,
-  benchmark = 46,
-  onTalkToCEO,
-}) {
+export default function ConversionSemaforo({ prelistings = 0, captaciones = 0, benchmark = 46 }) {
   const pct =
     prelistings > 0 ? Math.round((captaciones / prelistings) * 100) : null;
 
@@ -70,24 +63,13 @@ export default function ConversionSemaforo({
         </div>
       </div>
 
-      {/* Mensaje del CEO cuando está en rojo */}
       {status === "rojo" && (
         <div className="mt-3 rounded-xl bg-black/30 border border-white/10 p-3">
           <p className="text-sm text-white/90 leading-snug">
-            <span className="font-bold">CEO:</span> Este mes estás dejando
-            captaciones sobre la mesa: {captaciones} de {prelistings}{" "}
-            prelistings. Con tu {benchmark}% histórico serían{" "}
-            {Math.round((prelistings * benchmark) / 100)}. ¿Repasamos tu guion
-            de prelisting?
+            Este mes estás dejando captaciones sobre la mesa: {captaciones} de{" "}
+            {prelistings} prelistings. Con tu {benchmark}% histórico serían{" "}
+            {Math.round((prelistings * benchmark) / 100)}.
           </p>
-          {onTalkToCEO && (
-            <button
-              onClick={onTalkToCEO}
-              className="mt-2 text-xs font-bold text-white rounded-lg bg-gradient-to-r from-[#003DA5] to-[#DC1C2E] px-3 py-2 active:translate-y-[1px]"
-            >
-              Hablar con el CEO →
-            </button>
-          )}
         </div>
       )}
 

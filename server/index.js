@@ -5,8 +5,6 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import fs from 'node:fs';
 
-import chatRouter from './routes/chat.js';
-import settingsRouter from './routes/settings.js';
 import calendarRouter from './routes/calendar.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -25,11 +23,8 @@ const app = express();
 // desde el celular), así que se refleja cualquier origen. En producción el server sirve el
 // build del client (mismo origen, no pasa por CORS) y de todas formas queda restringido a CLIENT_ORIGIN.
 app.use(cors({ origin: process.env.NODE_ENV === 'production' ? CLIENT_ORIGIN : true }));
-// 20mb para que entren los adjuntos de chat (imágenes/PDF) codificados en base64.
-app.use(express.json({ limit: '20mb' }));
+app.use(express.json());
 
-app.use('/api/chat', chatRouter);
-app.use('/api/settings', settingsRouter);
 app.use('/api/calendar', calendarRouter);
 
 app.get('/api/health', (_req, res) => {

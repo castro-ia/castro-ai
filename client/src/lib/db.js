@@ -1,7 +1,7 @@
 import { openDB } from 'idb';
 
 const DB_NAME = 'castro-ai-db';
-const DB_VERSION = 1;
+const DB_VERSION = 2;
 
 let dbPromise;
 
@@ -9,65 +9,20 @@ function getDb() {
   if (!dbPromise) {
     dbPromise = openDB(DB_NAME, DB_VERSION, {
       upgrade(db) {
-        if (!db.objectStoreNames.contains('conversations')) {
-          db.createObjectStore('conversations', { keyPath: 'agentId' });
-        }
-        if (!db.objectStoreNames.contains('contacts')) {
-          const store = db.createObjectStore('contacts', { keyPath: 'id' });
-          store.createIndex('type', 'type');
+        // v1 → v2: se sacaron el chat de Equipo y el CRM de contactos.
+        for (const old of ['conversations', 'contacts', 'promptOverrides']) {
+          if (db.objectStoreNames.contains(old)) db.deleteObjectStore(old);
         }
         if (!db.objectStoreNames.contains('tasks')) {
-          const store = db.createObjectStore('tasks', { keyPath: 'id' });
-          store.createIndex('contactId', 'contactId');
+          db.createObjectStore('tasks', { keyPath: 'id' });
         }
         if (!db.objectStoreNames.contains('kpis')) {
           db.createObjectStore('kpis', { keyPath: 'key' });
-        }
-        if (!db.objectStoreNames.contains('promptOverrides')) {
-          db.createObjectStore('promptOverrides', { keyPath: 'agentId' });
         }
       },
     });
   }
   return dbPromise;
-}
-
-// --- Conversaciones ---
-
-export async function getConversation(agentId) {
-  const db = await getDb();
-  const record = await db.get('conversations', agentId);
-  return record?.messages || [];
-}
-
-export async function saveConversation(agentId, messages) {
-  const db = await getDb();
-  await db.put('conversations', { agentId, messages, updatedAt: Date.now() });
-}
-
-export async function clearConversation(agentId) {
-  const db = await getDb();
-  await db.delete('conversations', agentId);
-}
-
-// --- Contactos ---
-
-export async function listContacts() {
-  const db = await getDb();
-  const all = await db.getAll('contacts');
-  return all.sort((a, b) => (a.name || '').localeCompare(b.name || ''));
-}
-
-export async function upsertContact(contact) {
-  const db = await getDb();
-  const record = { ...contact, id: contact.id || crypto.randomUUID(), updatedAt: Date.now() };
-  await db.put('contacts', record);
-  return record;
-}
-
-export async function deleteContact(id) {
-  const db = await getDb();
-  await db.delete('contacts', id);
 }
 
 // --- Tareas ---
@@ -108,28 +63,4 @@ export async function getKpis() {
 export async function saveKpis(kpis) {
   const db = await getDb();
   await db.put('kpis', { ...kpis, key: 'main', updatedAt: Date.now() });
-}
-
-// --- Overrides de system prompt por agente ---
-
-export async function getPromptOverride(agentId) {
-  const db = await getDb();
-  const record = await db.get('promptOverrides', agentId);
-  return record?.systemPrompt ?? null;
-}
-
-export async function getAllPromptOverrides() {
-  const db = await getDb();
-  const all = await db.getAll('promptOverrides');
-  return Object.fromEntries(all.map((r) => [r.agentId, r.systemPrompt]));
-}
-
-export async function savePromptOverride(agentId, systemPrompt) {
-  const db = await getDb();
-  await db.put('promptOverrides', { agentId, systemPrompt, updatedAt: Date.now() });
-}
-
-export async function resetPromptOverride(agentId) {
-  const db = await getDb();
-  await db.delete('promptOverrides', agentId);
 }

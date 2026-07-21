@@ -1,5 +1,5 @@
-import { Link, useNavigate, useOutletContext } from 'react-router-dom';
-import { MessagesSquare, Menu, ChevronRight, RefreshCw } from 'lucide-react';
+import { Link, useOutletContext } from 'react-router-dom';
+import { CalendarDays, Menu, ChevronRight, RefreshCw } from 'lucide-react';
 import { brand } from '../config/brand';
 import { useKpis } from '../hooks/useKpis';
 import { KpiCard } from '../components/ui/KpiCard';
@@ -29,7 +29,6 @@ function formatSyncedAt(timestamp) {
 
 export default function Home() {
   const { openDrawer } = useOutletContext();
-  const navigate = useNavigate();
   const { kpis, updateKpi, calendarConnected, syncing, syncError, syncFromCalendar } = useKpis();
 
   const captaciones = kpis?.captaciones ?? 0;
@@ -65,15 +64,15 @@ export default function Home() {
 
       <section className="-mt-3 px-4">
         <Link
-          to="/equipo"
+          to="/calendario"
           className="flex items-center gap-3 rounded-2xl bg-remax-gradient p-4 shadow-block transition active:scale-[0.98]"
         >
           <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-black/20">
-            <MessagesSquare size={22} color="white" />
+            <CalendarDays size={22} color="white" />
           </div>
           <div className="min-w-0 flex-1">
-            <p className="font-display text-base text-white">Hablar con el CEO</p>
-            <p className="truncate text-xs text-white/80">Tu consejero estratégico coordina al equipo por vos</p>
+            <p className="font-display text-base text-white">Ver mi día</p>
+            <p className="truncate text-xs text-white/80">Tu agenda de hoy, por colores: negocio y personal</p>
           </div>
           <ChevronRight size={20} className="shrink-0 text-white/70" />
         </Link>
@@ -118,12 +117,7 @@ export default function Home() {
           <KpiCard label="Cierres" value={kpis?.cierres ?? 0} onSave={(v) => updateKpi('cierres', v)} />
         </div>
         <div className="mt-3">
-          <ConversionSemaforo
-            prelistings={prelistings}
-            captaciones={captaciones}
-            benchmark={benchmark}
-            onTalkToCEO={() => navigate('/equipo')}
-          />
+          <ConversionSemaforo prelistings={prelistings} captaciones={captaciones} benchmark={benchmark} />
         </div>
       </section>
 

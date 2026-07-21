@@ -57,11 +57,12 @@ export function CalendarSection() {
           </Button>
           {error && <p className="text-sm text-red-400">{error}</p>}
           <p className="text-xs text-white/35">
-            Solo se lee tu calendario (no se modifica nada). Los eventos se cuentan por palabra clave en el título:
+            Se usa para leer tu calendario (War Room, Calendario del día) y para crear los recordatorios por email de
+            tus tareas. Si conectaste el calendario antes de esta función, reconectalo una vez para habilitar el
+            permiso de crear recordatorios. Los KPIs del War Room se cuentan por palabra clave en el título:
             "prelisting", "tasación", "autorización de venta" (captación), "mostrar" (muestra), "reservar" (reserva) o
-            "escritura" (cierre). Los eventos recurrentes (recordatorios diarios/semanales) no se cuentan, y en
-            "escritura" se ignoran los que sean solo trámite o recordatorio (retirar, prórroga, posible, gastos,
-            reintegrar).
+            "escritura" (cierre). Los eventos recurrentes no se cuentan, y en "escritura" se ignoran los que sean solo
+            trámite o recordatorio (retirar, prórroga, posible, gastos, reintegrar).
           </p>
         </div>
       )}

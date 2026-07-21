@@ -5,8 +5,11 @@ const router = Router();
 
 const GOOGLE_TOKEN_URL = 'https://oauth2.googleapis.com/token';
 const GOOGLE_AUTH_URL = 'https://accounts.google.com/o/oauth2/v2/auth';
-const CALENDAR_SCOPE = 'https://www.googleapis.com/auth/calendar.readonly';
+// calendar.events alcanza para todo lo que hacemos (leer eventos para los KPIs/agenda,
+// y crear/borrar eventos para los recordatorios de tareas) sin pedir acceso de más.
+const CALENDAR_SCOPE = 'https://www.googleapis.com/auth/calendar.events';
 const BUENOS_AIRES_OFFSET = '-03:00';
+const BUENOS_AIRES_TZ = 'America/Argentina/Buenos_Aires';
 
 function getConfig() {
   return {
@@ -52,6 +55,41 @@ const CIERRE_FALSE_POSITIVES = ['retirar', 'prorroga', 'posible', 'gastos', 'rei
 
 function isRealCierre(title) {
   return !CIERRE_FALSE_POSITIVES.some((word) => title.includes(word));
+}
+
+// Para la agenda del día (Calendario): clasificación más laxa que la de los KPIs,
+// solo para decidir el color (verde negocio / rojo personal), no para contar nada.
+const NEGOCIO_KEYWORDS = [
+  'tasacion',
+  'prelisting',
+  'autorizacion',
+  'captacion',
+  'mostrar',
+  'reservar',
+  'escritura',
+  'cliente',
+  'propiedad',
+  'inmobiliaria',
+  'inquilino',
+  'propietario',
+  'alquiler',
+  'venta',
+  'oficina',
+  'reunion',
+  'depto',
+  'departamento',
+  'refuerzo',
+  'sena', // "seña" ya sin tilde tras normalize()
+  'boleto',
+  'escribano',
+  'condominio',
+  'sucesion',
+  'lote',
+  'casa',
+];
+
+function esNegocio(title) {
+  return NEGOCIO_KEYWORDS.some((word) => title.includes(word));
 }
 
 function htmlPage(title, bodyHtml) {
@@ -215,7 +253,7 @@ router.get('/kpis', async (req, res) => {
   }
 });
 
-router.get('/today', async (_req, res) => {
+router.get('/today', async (req, res) => {
   const config = getConfig();
   const refreshToken = process.env.GOOGLE_REFRESH_TOKEN;
 
@@ -225,9 +263,10 @@ router.get('/today', async (_req, res) => {
 
   const pad = (n) => String(n).padStart(2, '0');
   const now = new Date();
-  const todayStr = `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}`;
-  const timeMin = `${todayStr}T00:00:00${BUENOS_AIRES_OFFSET}`;
-  const timeMax = `${todayStr}T23:59:59${BUENOS_AIRES_OFFSET}`;
+  const defaultDate = `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}`;
+  const dateStr = /^\d{4}-\d{2}-\d{2}$/.test(req.query.date) ? req.query.date : defaultDate;
+  const timeMin = `${dateStr}T00:00:00${BUENOS_AIRES_OFFSET}`;
+  const timeMax = `${dateStr}T23:59:59${BUENOS_AIRES_OFFSET}`;
 
   try {
     const accessToken = await getAccessToken(config, refreshToken);
@@ -240,7 +279,7 @@ router.get('/today', async (_req, res) => {
     eventsUrl.searchParams.set('timeMax', timeMax);
     eventsUrl.searchParams.set('singleEvents', 'true');
     eventsUrl.searchParams.set('orderBy', 'startTime');
-    eventsUrl.searchParams.set('maxResults', '20');
+    eventsUrl.searchParams.set('maxResults', '50');
 
     const eventsRes = await fetch(eventsUrl, {
       headers: { Authorization: `Bearer ${accessToken}` },
@@ -250,20 +289,104 @@ router.get('/today', async (_req, res) => {
       return res.status(502).json({ error: eventsData.error?.message || 'No se pudo leer el calendario.' });
     }
 
-    const events = (eventsData.items || []).map((item) => ({
-      summary: item.summary || '(sin título)',
-      start: item.start?.dateTime
-        ? new Date(item.start.dateTime).toLocaleTimeString('es-AR', {
-            hour: '2-digit',
-            minute: '2-digit',
-            timeZone: 'America/Argentina/Buenos_Aires',
-          })
-        : null,
-    }));
+    const events = (eventsData.items || []).map((item) => {
+      const title = item.summary || '(sin título)';
+      return {
+        id: item.id,
+        summary: title,
+        start: item.start?.dateTime
+          ? new Date(item.start.dateTime).toLocaleTimeString('es-AR', {
+              hour: '2-digit',
+              minute: '2-digit',
+              timeZone: BUENOS_AIRES_TZ,
+            })
+          : null,
+        allDay: !item.start?.dateTime,
+        esNegocio: esNegocio(normalize(title)),
+      };
+    });
 
-    res.json({ events });
+    res.json({ date: dateStr, events });
   } catch (err) {
     res.status(500).json({ error: err.message || 'Error inesperado al leer el calendario.' });
+  }
+});
+
+router.post('/event', async (req, res) => {
+  const config = getConfig();
+  const refreshToken = process.env.GOOGLE_REFRESH_TOKEN;
+
+  if (!isConfigured(config) || !refreshToken) {
+    return res.status(412).json({ error: 'Todavía no conectaste tu Google Calendar. Hacelo desde Ajustes.' });
+  }
+
+  const { summary, date, time, reminderMinutes } = req.body || {};
+  if (!summary || !/^\d{4}-\d{2}-\d{2}$/.test(date)) {
+    return res.status(400).json({ error: 'Falta el título o la fecha del recordatorio.' });
+  }
+  const startTime = /^\d{2}:\d{2}$/.test(time) ? time : '09:00';
+  const [h, m] = startTime.split(':').map(Number);
+  const endTime = `${String(h).padStart(2, '0')}:${String((m + 30) % 60).padStart(2, '0')}`;
+
+  try {
+    const accessToken = await getAccessToken(config, refreshToken);
+    if (!accessToken) {
+      return res.status(401).json({ error: 'Se venció el acceso a tu Google Calendar. Reconectalo en Ajustes.' });
+    }
+
+    const eventRes = await fetch('https://www.googleapis.com/calendar/v3/calendars/primary/events', {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${accessToken}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        summary,
+        start: { dateTime: `${date}T${startTime}:00${BUENOS_AIRES_OFFSET}`, timeZone: BUENOS_AIRES_TZ },
+        end: { dateTime: `${date}T${endTime}:00${BUENOS_AIRES_OFFSET}`, timeZone: BUENOS_AIRES_TZ },
+        reminders: {
+          useDefault: false,
+          overrides: [
+            { method: 'email', minutes: Number(reminderMinutes) || 60 },
+            { method: 'popup', minutes: Number(reminderMinutes) || 60 },
+          ],
+        },
+      }),
+    });
+    const eventData = await eventRes.json();
+    if (!eventRes.ok) {
+      return res.status(502).json({ error: eventData.error?.message || 'No se pudo crear el recordatorio en el calendario.' });
+    }
+
+    res.json({ eventId: eventData.id });
+  } catch (err) {
+    res.status(500).json({ error: err.message || 'Error inesperado al crear el recordatorio.' });
+  }
+});
+
+router.delete('/event/:id', async (req, res) => {
+  const config = getConfig();
+  const refreshToken = process.env.GOOGLE_REFRESH_TOKEN;
+
+  if (!isConfigured(config) || !refreshToken) {
+    return res.status(412).json({ error: 'Todavía no conectaste tu Google Calendar.' });
+  }
+
+  try {
+    const accessToken = await getAccessToken(config, refreshToken);
+    if (!accessToken) {
+      return res.status(401).json({ error: 'Se venció el acceso a tu Google Calendar. Reconectalo en Ajustes.' });
+    }
+
+    const eventRes = await fetch(
+      `https://www.googleapis.com/calendar/v3/calendars/primary/events/${encodeURIComponent(req.params.id)}`,
+      { method: 'DELETE', headers: { Authorization: `Bearer ${accessToken}` } }
+    );
+    if (!eventRes.ok && eventRes.status !== 404 && eventRes.status !== 410) {
+      const errData = await eventRes.json().catch(() => ({}));
+      return res.status(502).json({ error: errData.error?.message || 'No se pudo borrar el recordatorio del calendario.' });
+    }
+
+    res.json({ ok: true });
+  } catch (err) {
+    res.status(500).json({ error: err.message || 'Error inesperado al borrar el recordatorio.' });
   }
 });
 

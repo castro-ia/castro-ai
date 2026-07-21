@@ -2,8 +2,7 @@ import { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { MainLayout } from './components/layout/MainLayout';
 import Home from './pages/Home';
-import Equipo from './pages/Equipo';
-import Crm from './pages/Crm';
+import Calendario from './pages/Calendario';
 import Tasks from './pages/Tasks';
 import Settings from './pages/Settings';
 import MorningBrief, { useMorningBrief } from './components/MorningBrief';
@@ -26,8 +25,7 @@ export default function App() {
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/equipo" element={<Equipo />} />
-          <Route path="/crm" element={<Crm />} />
+          <Route path="/calendario" element={<Calendario />} />
           <Route path="/tareas" element={<Tasks />} />
           <Route path="/ajustes" element={<Settings />} />
         </Route>
