@@ -1,13 +1,16 @@
+import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
-import { BottomNav } from './BottomNav';
+import { SideDrawer } from './SideDrawer';
 
 export function MainLayout() {
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
   return (
-    <div className="mx-auto flex min-h-screen max-w-md flex-col bg-night-900">
-      <div className="flex-1 pb-24">
-        <Outlet />
+    <div className="mx-auto flex h-screen max-w-md flex-col bg-night-900">
+      <div className="min-h-0 flex-1 overflow-y-auto">
+        <Outlet context={{ openDrawer: () => setDrawerOpen(true) }} />
       </div>
-      <BottomNav />
+      <SideDrawer open={drawerOpen} onClose={() => setDrawerOpen(false)} />
     </div>
   );
 }

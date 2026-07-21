@@ -4,11 +4,12 @@
 const API_URL = import.meta.env.VITE_API_URL || '';
 
 /**
- * Manda la conversación al backend y consume la respuesta en streaming (SSE sobre POST).
- * callbacks: { onDelta(text), onDone(), onError(message) }
+ * Manda la conversación de Equipo al backend (con orquestación CEO → especialistas)
+ * y consume la respuesta en streaming (SSE sobre POST).
+ * callbacks: { onDelta(text), onDelegating(agentId, name), onDone(), onError(message) }
  * Devuelve una función `abort()` para cancelar el streaming.
  */
-export function streamChat({ messages, systemPrompt }, { onDelta, onDone, onError }) {
+export function streamChat({ messages, ceoSystemPrompt, specialists }, { onDelta, onDelegating, onDone, onError }) {
   const controller = new AbortController();
 
   (async () => {
@@ -16,7 +17,7 @@ export function streamChat({ messages, systemPrompt }, { onDelta, onDone, onErro
       const res = await fetch(`${API_URL}/api/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ messages, systemPrompt }),
+        body: JSON.stringify({ messages, ceoSystemPrompt, specialists }),
         signal: controller.signal,
       });
 
@@ -47,6 +48,7 @@ export function streamChat({ messages, systemPrompt }, { onDelta, onDone, onErro
           const data = JSON.parse(dataMatch[1]);
 
           if (event === 'delta') onDelta(data.text);
+          else if (event === 'delegating') onDelegating?.(data.agent, data.name);
           else if (event === 'done') onDone();
           else if (event === 'error') onError(data.message);
         }

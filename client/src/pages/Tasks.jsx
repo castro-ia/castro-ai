@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { useOutletContext } from 'react-router-dom';
 import { Plus, CheckSquare } from 'lucide-react';
 import { Header } from '../components/layout/Header';
 import { EmptyState } from '../components/ui/EmptyState';
@@ -8,6 +9,7 @@ import { useTasks } from '../hooks/useTasks';
 import { useContacts } from '../hooks/useContacts';
 
 export default function Tasks() {
+  const { openDrawer } = useOutletContext();
   const { tasks, saveTask, removeTask, toggleDone } = useTasks();
   const { contacts } = useContacts();
   const [selected, setSelected] = useState(undefined);
@@ -31,6 +33,7 @@ export default function Tasks() {
       <Header
         title="Tareas"
         subtitle={`${pending.length} pendiente${pending.length === 1 ? '' : 's'}`}
+        onMenuOpen={openDrawer}
         rightSlot={
           <button
             onClick={() => setSelected(null)}

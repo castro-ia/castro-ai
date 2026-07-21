@@ -24,7 +24,8 @@ const app = express();
 // desde el celular), así que se refleja cualquier origen. En producción el server sirve el
 // build del client (mismo origen, no pasa por CORS) y de todas formas queda restringido a CLIENT_ORIGIN.
 app.use(cors({ origin: process.env.NODE_ENV === 'production' ? CLIENT_ORIGIN : true }));
-app.use(express.json({ limit: '1mb' }));
+// 20mb para que entren los adjuntos de chat (imágenes/PDF) codificados en base64.
+app.use(express.json({ limit: '20mb' }));
 
 app.use('/api/chat', chatRouter);
 app.use('/api/settings', settingsRouter);

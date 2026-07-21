@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { useOutletContext } from 'react-router-dom';
 import { Plus, Search, Users } from 'lucide-react';
 import { Header } from '../components/layout/Header';
 import { EmptyState } from '../components/ui/EmptyState';
@@ -7,6 +8,7 @@ import { ContactForm } from '../components/crm/ContactForm';
 import { useContacts } from '../hooks/useContacts';
 
 export default function Crm() {
+  const { openDrawer } = useOutletContext();
   const { contacts, saveContact, removeContact } = useContacts();
   const [query, setQuery] = useState('');
   const [selected, setSelected] = useState(undefined); // undefined = cerrado, null = nuevo, obj = editar
@@ -34,6 +36,7 @@ export default function Crm() {
       <Header
         title="Mini CRM"
         subtitle={`${contacts.length} contacto${contacts.length === 1 ? '' : 's'}`}
+        onMenuOpen={openDrawer}
         rightSlot={
           <button
             onClick={() => setSelected(null)}
