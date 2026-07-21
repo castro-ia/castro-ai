@@ -66,7 +66,7 @@ export default function MorningBrief({ events = [], onClose }) {
               SOY FERNANDO CASTRO
             </p>
             <p className="mt-1 text-sm text-white/70">
-              De Rafael Castillo al Hall of Fame · El 1 de RE/MAX Palermo
+              De Rafael Castillo al Lifetime Achievement · Mi espectacular depto en Palermo · Vivo en abundancia
             </p>
           </div>
         </div>
