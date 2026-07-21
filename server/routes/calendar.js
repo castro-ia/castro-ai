@@ -181,6 +181,10 @@ router.get('/kpis', async (req, res) => {
 
     const counts = { prelistings: 0, tasaciones: 0, captaciones: 0 };
     for (const item of eventsData.items || []) {
+      // Los recordatorios diarios/semanales recurrentes (ej. "objetivo semanal: 4 prelistings")
+      // no son operaciones reales — solo cuentan eventos puntuales, no instancias de una serie.
+      if (item.recurringEventId) continue;
+
       const title = normalize(item.summary);
       if (title.includes('tasacion')) counts.tasaciones += 1;
       else if (title.includes('prelisting')) counts.prelistings += 1;
