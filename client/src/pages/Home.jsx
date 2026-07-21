@@ -94,6 +94,9 @@ export default function Home() {
           <KpiCard label="Prelistings del mes" value={prelistings} onSave={(v) => updateKpi('prelistings', v)} />
           <KpiCard label="Tasaciones" value={kpis?.tasaciones ?? 0} onSave={(v) => updateKpi('tasaciones', v)} />
           <KpiCard label="Captaciones" value={captaciones} onSave={(v) => updateKpi('captaciones', v)} />
+          <KpiCard label="Muestras" value={kpis?.muestras ?? 0} onSave={(v) => updateKpi('muestras', v)} />
+          <KpiCard label="Reservas" value={kpis?.reservas ?? 0} onSave={(v) => updateKpi('reservas', v)} />
+          <KpiCard label="Cierres" value={kpis?.cierres ?? 0} onSave={(v) => updateKpi('cierres', v)} />
           <div className="rounded-2xl border border-white/10 bg-white/5 p-3.5">
             <p className="mb-1 text-[11px] font-medium uppercase tracking-wide text-white/40">
               Conversión vs. {benchmark}%

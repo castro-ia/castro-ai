@@ -28,8 +28,17 @@ export function useKpis() {
     setSyncing(true);
     setSyncError(null);
     try {
-      const { prelistings, tasaciones, captaciones } = await getCalendarKpis();
-      const next = { ...(kpis || {}), prelistings, tasaciones, captaciones, lastSyncedAt: Date.now() };
+      const { prelistings, tasaciones, captaciones, muestras, reservas, cierres } = await getCalendarKpis();
+      const next = {
+        ...(kpis || {}),
+        prelistings,
+        tasaciones,
+        captaciones,
+        muestras,
+        reservas,
+        cierres,
+        lastSyncedAt: Date.now(),
+      };
       setKpis(next);
       await saveKpis(next);
     } catch (err) {

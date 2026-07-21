@@ -179,7 +179,7 @@ router.get('/kpis', async (req, res) => {
       return res.status(502).json({ error: eventsData.error?.message || 'No se pudo leer el calendario.' });
     }
 
-    const counts = { prelistings: 0, tasaciones: 0, captaciones: 0 };
+    const counts = { prelistings: 0, tasaciones: 0, captaciones: 0, muestras: 0, reservas: 0, cierres: 0 };
     for (const item of eventsData.items || []) {
       // Los recordatorios diarios/semanales recurrentes (ej. "objetivo semanal: 4 prelistings")
       // no son operaciones reales — solo cuentan eventos puntuales, no instancias de una serie.
@@ -189,6 +189,9 @@ router.get('/kpis', async (req, res) => {
       if (title.includes('tasacion')) counts.tasaciones += 1;
       else if (title.includes('prelisting')) counts.prelistings += 1;
       else if (title.includes('autorizacion') || title.includes('captacion')) counts.captaciones += 1;
+      else if (title.includes('mostrar')) counts.muestras += 1;
+      else if (title.includes('reservar')) counts.reservas += 1;
+      else if (title.includes('escritura')) counts.cierres += 1;
     }
 
     res.json({ ...counts, month: `${year}-${pad(month)}`, eventCount: (eventsData.items || []).length });

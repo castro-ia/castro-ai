@@ -92,7 +92,18 @@ Railway funciona igual: mismo build command, mismo start command, mismas variabl
 
 ## 7. Conectar Google Calendar (opcional)
 
-Esto hace que el War Room actualice solo Prelistings, Tasaciones y Captaciones a partir de tu calendario real. Se categoriza por palabra clave en el título del evento: **"tasación"**, **"prelisting"**, **"captación"** o **"autorización de venta"**. Los eventos recurrentes (recordatorios diarios/semanales) no cuentan — solo eventos puntuales.
+Esto hace que el War Room actualice solo Prelistings, Tasaciones, Captaciones, Muestras, Reservas y Cierres a partir de tu calendario real. Se categoriza por palabra clave en el título del evento:
+
+| KPI | Palabra clave en el título |
+|---|---|
+| Prelistings | "prelisting" |
+| Tasaciones | "tasación" |
+| Captaciones | "autorización de venta" (o "captación") |
+| Muestras | "mostrar" |
+| Reservas | "reservar" |
+| Cierres | "escritura" |
+
+Los eventos recurrentes (recordatorios diarios/semanales) no cuentan — solo eventos puntuales.
 
 ### 7.1 Crear las credenciales en Google Cloud Console
 
