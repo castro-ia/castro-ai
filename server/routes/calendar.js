@@ -29,6 +29,15 @@ function normalize(text) {
     .replace(COMBINING_DIACRITICS, ''); // saca los acentos (tildes), que tras el normalize quedan como marcas combinables
 }
 
+// "escritura" también aparece en eventos que NO son el cierre en sí: recordatorios de
+// vencimiento de plazo, trámites de retirar el testimonio ya firmado, reintegros de gastos
+// o cierres todavía no confirmados. Esos no cuentan como cierre real.
+const CIERRE_FALSE_POSITIVES = ['retirar', 'prorroga', 'posible', 'gastos', 'reintegrar'];
+
+function isRealCierre(title) {
+  return !CIERRE_FALSE_POSITIVES.some((word) => title.includes(word));
+}
+
 function htmlPage(title, bodyHtml) {
   return `<!doctype html>
 <html lang="es"><head><meta charset="utf-8" /><title>${title}</title>
@@ -191,7 +200,7 @@ router.get('/kpis', async (req, res) => {
       else if (title.includes('autorizacion') || title.includes('captacion')) counts.captaciones += 1;
       else if (title.includes('mostrar')) counts.muestras += 1;
       else if (title.includes('reservar')) counts.reservas += 1;
-      else if (title.includes('escritura')) counts.cierres += 1;
+      else if (title.includes('escritura') && isRealCierre(title)) counts.cierres += 1;
     }
 
     res.json({ ...counts, month: `${year}-${pad(month)}`, eventCount: (eventsData.items || []).length });

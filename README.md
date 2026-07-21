@@ -103,7 +103,7 @@ Esto hace que el War Room actualice solo Prelistings, Tasaciones, Captaciones, M
 | Reservas | "reservar" |
 | Cierres | "escritura" |
 
-Los eventos recurrentes (recordatorios diarios/semanales) no cuentan — solo eventos puntuales.
+Los eventos recurrentes (recordatorios diarios/semanales) no cuentan — solo eventos puntuales. Para Cierres, además se excluyen los títulos que digan "retirar", "prórroga", "posible", "gastos" o "reintegrar" junto con "escritura" — son trámites o recordatorios sobre una escritura, no el cierre en sí.
 
 ### 7.1 Crear las credenciales en Google Cloud Console
 

@@ -59,7 +59,9 @@ export function CalendarSection() {
           <p className="text-xs text-white/35">
             Solo se lee tu calendario (no se modifica nada). Los eventos se cuentan por palabra clave en el título:
             "prelisting", "tasación", "autorización de venta" (captación), "mostrar" (muestra), "reservar" (reserva) o
-            "escritura" (cierre). Los eventos recurrentes (recordatorios diarios/semanales) no se cuentan.
+            "escritura" (cierre). Los eventos recurrentes (recordatorios diarios/semanales) no se cuentan, y en
+            "escritura" se ignoran los que sean solo trámite o recordatorio (retirar, prórroga, posible, gastos,
+            reintegrar).
           </p>
         </div>
       )}
