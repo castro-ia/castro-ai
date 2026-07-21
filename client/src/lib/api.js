@@ -100,3 +100,10 @@ export async function getCalendarKpis(month) {
   if (!res.ok) throw new Error(body.error || 'No se pudo sincronizar con el calendario.');
   return body;
 }
+
+export async function getCalendarToday() {
+  const res = await fetch(`${API_URL}/api/calendar/today`);
+  const body = await res.json().catch(() => ({}));
+  if (!res.ok) throw new Error(body.error || 'No se pudo leer la agenda de hoy.');
+  return body;
+}

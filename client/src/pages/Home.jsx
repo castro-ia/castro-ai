@@ -1,8 +1,11 @@
-import { Link, useOutletContext } from 'react-router-dom';
+import { Link, useNavigate, useOutletContext } from 'react-router-dom';
 import { MessagesSquare, Menu, ChevronRight, RefreshCw } from 'lucide-react';
 import { brand } from '../config/brand';
 import { useKpis } from '../hooks/useKpis';
 import { KpiCard } from '../components/ui/KpiCard';
+import Goals2026 from '../components/Goals2026';
+import ConversionSemaforo from '../components/ConversionSemaforo';
+import FridayCheckin from '../components/FridayCheckin';
 
 function getGreeting() {
   const hour = new Date().getHours();
@@ -18,11 +21,11 @@ function formatSyncedAt(timestamp) {
 
 export default function Home() {
   const { openDrawer } = useOutletContext();
+  const navigate = useNavigate();
   const { kpis, updateKpi, calendarConnected, syncing, syncError, syncFromCalendar } = useKpis();
 
   const captaciones = kpis?.captaciones ?? 0;
   const prelistings = kpis?.prelistings ?? 0;
-  const conversion = prelistings > 0 ? Math.round((captaciones / prelistings) * 100) : 0;
   const benchmark = brand.kpis.conversionBenchmark;
 
   return (
@@ -66,6 +69,14 @@ export default function Home() {
       </section>
 
       <section className="mt-4 px-4">
+        <FridayCheckin />
+      </section>
+
+      <section className="mt-4 px-4">
+        <Goals2026 />
+      </section>
+
+      <section className="mt-4 px-4">
         <div className="mb-2 flex items-center justify-between">
           {calendarConnected ? (
             <>
@@ -94,14 +105,14 @@ export default function Home() {
           <KpiCard label="Muestras" value={kpis?.muestras ?? 0} onSave={(v) => updateKpi('muestras', v)} />
           <KpiCard label="Reservas" value={kpis?.reservas ?? 0} onSave={(v) => updateKpi('reservas', v)} />
           <KpiCard label="Cierres" value={kpis?.cierres ?? 0} onSave={(v) => updateKpi('cierres', v)} />
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-3.5">
-            <p className="mb-1 text-[11px] font-medium uppercase tracking-wide text-white/40">
-              Conversión vs. {benchmark}%
-            </p>
-            <p className={`font-display text-2xl ${conversion >= benchmark ? 'text-emerald-400' : 'text-white'}`}>
-              {conversion}%
-            </p>
-          </div>
+        </div>
+        <div className="mt-3">
+          <ConversionSemaforo
+            prelistings={prelistings}
+            captaciones={captaciones}
+            benchmark={benchmark}
+            onTalkToCEO={() => navigate('/equipo')}
+          />
         </div>
       </section>
 

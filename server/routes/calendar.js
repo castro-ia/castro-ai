@@ -20,6 +20,22 @@ function isConfigured({ clientId, clientSecret, redirectUri }) {
   return Boolean(clientId && clientSecret && redirectUri);
 }
 
+async function getAccessToken(config, refreshToken) {
+  const tokenRes = await fetch(GOOGLE_TOKEN_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams({
+      refresh_token: refreshToken,
+      client_id: config.clientId,
+      client_secret: config.clientSecret,
+      grant_type: 'refresh_token',
+    }),
+  });
+  const tokenData = await tokenRes.json();
+  if (!tokenRes.ok || !tokenData.access_token) return null;
+  return tokenData.access_token;
+}
+
 const COMBINING_DIACRITICS = /[̀-ͯ]/g;
 
 function normalize(text) {
@@ -159,18 +175,8 @@ router.get('/kpis', async (req, res) => {
   const timeMax = `${nextMonth.y}-${pad(nextMonth.m)}-01T00:00:00${BUENOS_AIRES_OFFSET}`;
 
   try {
-    const tokenRes = await fetch(GOOGLE_TOKEN_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams({
-        refresh_token: refreshToken,
-        client_id: config.clientId,
-        client_secret: config.clientSecret,
-        grant_type: 'refresh_token',
-      }),
-    });
-    const tokenData = await tokenRes.json();
-    if (!tokenRes.ok || !tokenData.access_token) {
+    const accessToken = await getAccessToken(config, refreshToken);
+    if (!accessToken) {
       return res.status(401).json({ error: 'Se venció el acceso a tu Google Calendar. Reconectalo en Ajustes.' });
     }
 
@@ -181,7 +187,7 @@ router.get('/kpis', async (req, res) => {
     eventsUrl.searchParams.set('maxResults', '250');
 
     const eventsRes = await fetch(eventsUrl, {
-      headers: { Authorization: `Bearer ${tokenData.access_token}` },
+      headers: { Authorization: `Bearer ${accessToken}` },
     });
     const eventsData = await eventsRes.json();
     if (!eventsRes.ok) {
@@ -204,6 +210,58 @@ router.get('/kpis', async (req, res) => {
     }
 
     res.json({ ...counts, month: `${year}-${pad(month)}`, eventCount: (eventsData.items || []).length });
+  } catch (err) {
+    res.status(500).json({ error: err.message || 'Error inesperado al leer el calendario.' });
+  }
+});
+
+router.get('/today', async (_req, res) => {
+  const config = getConfig();
+  const refreshToken = process.env.GOOGLE_REFRESH_TOKEN;
+
+  if (!isConfigured(config) || !refreshToken) {
+    return res.status(412).json({ error: 'Todavía no conectaste tu Google Calendar. Hacelo desde Ajustes.' });
+  }
+
+  const pad = (n) => String(n).padStart(2, '0');
+  const now = new Date();
+  const todayStr = `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}`;
+  const timeMin = `${todayStr}T00:00:00${BUENOS_AIRES_OFFSET}`;
+  const timeMax = `${todayStr}T23:59:59${BUENOS_AIRES_OFFSET}`;
+
+  try {
+    const accessToken = await getAccessToken(config, refreshToken);
+    if (!accessToken) {
+      return res.status(401).json({ error: 'Se venció el acceso a tu Google Calendar. Reconectalo en Ajustes.' });
+    }
+
+    const eventsUrl = new URL('https://www.googleapis.com/calendar/v3/calendars/primary/events');
+    eventsUrl.searchParams.set('timeMin', timeMin);
+    eventsUrl.searchParams.set('timeMax', timeMax);
+    eventsUrl.searchParams.set('singleEvents', 'true');
+    eventsUrl.searchParams.set('orderBy', 'startTime');
+    eventsUrl.searchParams.set('maxResults', '20');
+
+    const eventsRes = await fetch(eventsUrl, {
+      headers: { Authorization: `Bearer ${accessToken}` },
+    });
+    const eventsData = await eventsRes.json();
+    if (!eventsRes.ok) {
+      return res.status(502).json({ error: eventsData.error?.message || 'No se pudo leer el calendario.' });
+    }
+
+    const events = (eventsData.items || []).map((item) => ({
+      summary: item.summary || '(sin título)',
+      start: item.start?.dateTime
+        ? new Date(item.start.dateTime).toLocaleTimeString('es-AR', {
+            hour: '2-digit',
+            minute: '2-digit',
+            timeZone: 'America/Argentina/Buenos_Aires',
+          })
+        : null,
+    }));
+
+    res.json({ events });
   } catch (err) {
     res.status(500).json({ error: err.message || 'Error inesperado al leer el calendario.' });
   }
