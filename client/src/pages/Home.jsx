@@ -6,12 +6,20 @@ import { KpiCard } from '../components/ui/KpiCard';
 import Goals2026 from '../components/Goals2026';
 import ConversionSemaforo from '../components/ConversionSemaforo';
 import FridayCheckin from '../components/FridayCheckin';
+import frases from '../data/frases.json';
+import { dayOfYear } from '../lib/castroStore';
+
+const VERSICULOS = frases.filter((f) => f.tipo === 'biblia');
 
 function getGreeting() {
   const hour = new Date().getHours();
   if (hour < 12) return 'Buen día';
   if (hour < 20) return 'Buenas tardes';
   return 'Buenas noches';
+}
+
+function getVersiculoDelDia() {
+  return VERSICULOS[dayOfYear() % VERSICULOS.length];
 }
 
 function formatSyncedAt(timestamp) {
@@ -27,6 +35,7 @@ export default function Home() {
   const captaciones = kpis?.captaciones ?? 0;
   const prelistings = kpis?.prelistings ?? 0;
   const benchmark = brand.kpis.conversionBenchmark;
+  const versiculo = getVersiculoDelDia();
 
   return (
     <div>
@@ -46,9 +55,11 @@ export default function Home() {
         <p className="text-sm text-white/80">
           {getGreeting()}, {brand.agentName.split(' ')[0]}
         </p>
-        <h1 className="font-display text-2xl leading-tight text-white text-block-3d">War Room</h1>
+        <h1 className="font-display text-lg leading-snug text-white text-block-3d">
+          “{versiculo.texto}”
+        </h1>
         <p className="mt-1 text-xs text-white/70">
-          {brand.role} · {brand.zone}
+          — {versiculo.autor} · {brand.role} · {brand.zone}
         </p>
       </header>
 
