@@ -7,6 +7,7 @@ import fs from 'node:fs';
 
 import chatRouter from './routes/chat.js';
 import settingsRouter from './routes/settings.js';
+import calendarRouter from './routes/calendar.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -29,6 +30,7 @@ app.use(express.json({ limit: '20mb' }));
 
 app.use('/api/chat', chatRouter);
 app.use('/api/settings', settingsRouter);
+app.use('/api/calendar', calendarRouter);
 
 app.get('/api/health', (_req, res) => {
   res.json({ ok: true });

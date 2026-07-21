@@ -90,6 +90,44 @@ Railway funciona igual: mismo build command, mismo start command, mismas variabl
 4. Confirmá el nombre ("Castro AI") y tocá **Agregar**.
 5. Ya la tenés como una app más en tu iPhone, con ícono propio y sin la barra de Safari.
 
+## 7. Conectar Google Calendar (opcional)
+
+Esto hace que el War Room actualice solo Prelistings, Tasaciones y Captaciones a partir de tu calendario real. Se categoriza por palabra clave en el título del evento: **"tasación"**, **"prelisting"**, **"captación"** o **"exclusiva"**.
+
+### 7.1 Crear las credenciales en Google Cloud Console
+
+1. Entrá a [console.cloud.google.com](https://console.cloud.google.com) con tu cuenta de Google y creá un proyecto nuevo (o usá uno existente).
+2. **APIs & Services → Library** → buscá **Google Calendar API** → **Enable**.
+3. **APIs & Services → OAuth consent screen**:
+   - **User Type**: External.
+   - Completá nombre de la app y tu email.
+   - **Test users**: agregá tu propia cuenta de Gmail (así podés usarla sin que Google la revise/verifique).
+4. **APIs & Services → Credentials → Create Credentials → OAuth client ID**:
+   - **Application type**: Web application.
+   - **Authorized redirect URIs**: agregá las dos:
+     - `http://localhost:8787/api/calendar/callback` (para probar en tu compu)
+     - `https://castro-ai.onrender.com/api/calendar/callback` (producción)
+   - Creá y copiá el **Client ID** y el **Client Secret**.
+
+### 7.2 Cargar las credenciales
+
+**En local** (`server/.env`):
+
+```
+GOOGLE_CLIENT_ID=tu-client-id
+GOOGLE_CLIENT_SECRET=tu-client-secret
+GOOGLE_REDIRECT_URI=http://localhost:8787/api/calendar/callback
+```
+
+**En Render** (Environment Variables del servicio): las mismas tres, pero con
+`GOOGLE_REDIRECT_URI=https://castro-ai.onrender.com/api/calendar/callback`.
+
+### 7.3 Conectar y copiar el token
+
+1. Entrá a **Ajustes → Google Calendar → Conectar Google Calendar** y aceptá el permiso (solo lectura).
+2. **En local** queda conectado automáticamente.
+3. **En producción**, Google te va a mostrar una pantalla con un texto largo (el `refresh_token`) — copialo y pegalo en Render como variable `GOOGLE_REFRESH_TOKEN`, guardá, y esperá a que el servicio reinicie. Es un paso único: no hay que repetirlo salvo que revoques el acceso desde tu cuenta de Google.
+
 ## Notas
 
 - El historial de chats, los contactos, las tareas y los KPIs se guardan en el dispositivo (IndexedDB) — no viajan a ningún servidor más que tu propio backend cuando le hablás a un agente.

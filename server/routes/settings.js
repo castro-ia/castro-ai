@@ -1,10 +1,5 @@
 import { Router } from 'express';
-import fs from 'node:fs';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const ENV_PATH = path.join(__dirname, '..', '.env');
+import { upsertEnvVar } from '../lib/envFile.js';
 
 const router = Router();
 
@@ -29,17 +24,7 @@ router.post('/api-key', (req, res) => {
     return res.status(400).json({ error: 'La API key no tiene el formato esperado (empieza con "sk-ant-").' });
   }
 
-  const trimmedKey = apiKey.trim();
-  let lines = [];
-  if (fs.existsSync(ENV_PATH)) {
-    lines = fs.readFileSync(ENV_PATH, 'utf-8').split('\n').filter(Boolean);
-  }
-
-  const withoutKey = lines.filter((line) => !line.startsWith('ANTHROPIC_API_KEY='));
-  withoutKey.push(`ANTHROPIC_API_KEY=${trimmedKey}`);
-  fs.writeFileSync(ENV_PATH, withoutKey.join('\n') + '\n', 'utf-8');
-
-  process.env.ANTHROPIC_API_KEY = trimmedKey;
+  upsertEnvVar('ANTHROPIC_API_KEY', apiKey.trim());
 
   res.json({ ok: true });
 });

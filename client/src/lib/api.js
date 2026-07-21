@@ -79,3 +79,24 @@ export async function saveApiKey(apiKey) {
   if (!res.ok) throw new Error(body.error || 'No se pudo guardar la API key.');
   return body;
 }
+
+export async function getCalendarStatus() {
+  const res = await fetch(`${API_URL}/api/calendar/status`);
+  if (!res.ok) throw new Error('No se pudo consultar el estado del calendario.');
+  return res.json();
+}
+
+export async function getCalendarAuthUrl() {
+  const res = await fetch(`${API_URL}/api/calendar/auth-url`);
+  const body = await res.json().catch(() => ({}));
+  if (!res.ok) throw new Error(body.error || 'No se pudo generar el link de conexión.');
+  return body.url;
+}
+
+export async function getCalendarKpis(month) {
+  const query = month ? `?month=${month}` : '';
+  const res = await fetch(`${API_URL}/api/calendar/kpis${query}`);
+  const body = await res.json().catch(() => ({}));
+  if (!res.ok) throw new Error(body.error || 'No se pudo sincronizar con el calendario.');
+  return body;
+}

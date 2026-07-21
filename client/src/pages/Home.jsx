@@ -1,5 +1,5 @@
 import { Link, useOutletContext } from 'react-router-dom';
-import { MessagesSquare, Menu, ChevronRight } from 'lucide-react';
+import { MessagesSquare, Menu, ChevronRight, RefreshCw } from 'lucide-react';
 import { agents } from '../config/agents';
 import { brand } from '../config/brand';
 import { useKpis } from '../hooks/useKpis';
@@ -13,9 +13,14 @@ function getGreeting() {
   return 'Buenas noches';
 }
 
+function formatSyncedAt(timestamp) {
+  if (!timestamp) return null;
+  return new Date(timestamp).toLocaleTimeString('es-AR', { hour: '2-digit', minute: '2-digit' });
+}
+
 export default function Home() {
   const { openDrawer } = useOutletContext();
-  const { kpis, updateKpi } = useKpis();
+  const { kpis, updateKpi, calendarConnected, syncing, syncError, syncFromCalendar } = useKpis();
 
   const captaciones = kpis?.captaciones ?? 0;
   const prelistings = kpis?.prelistings ?? 0;
@@ -63,6 +68,28 @@ export default function Home() {
       </section>
 
       <section className="mt-4 px-4">
+        <div className="mb-2 flex items-center justify-between">
+          {calendarConnected ? (
+            <>
+              <p className="text-xs text-white/35">
+                {kpis?.lastSyncedAt ? `Sincronizado ${formatSyncedAt(kpis.lastSyncedAt)}` : 'Todavía no sincronizaste'}
+              </p>
+              <button
+                onClick={syncFromCalendar}
+                disabled={syncing}
+                className="flex items-center gap-1.5 rounded-full bg-white/5 px-3 py-1.5 text-xs font-medium text-white/70 active:bg-white/10 disabled:opacity-50"
+              >
+                <RefreshCw size={12} className={syncing ? 'animate-spin' : ''} />
+                {syncing ? 'Sincronizando...' : 'Sincronizar'}
+              </button>
+            </>
+          ) : (
+            <Link to="/ajustes" className="text-xs text-white/40 underline underline-offset-2">
+              Conectá tu Google Calendar en Ajustes para actualizar esto solo
+            </Link>
+          )}
+        </div>
+        {syncError && <p className="mb-2 text-xs text-red-300">{syncError}</p>}
         <div className="grid grid-cols-2 gap-3">
           <KpiCard label="Prelistings del mes" value={prelistings} onSave={(v) => updateKpi('prelistings', v)} />
           <KpiCard label="Tasaciones" value={kpis?.tasaciones ?? 0} onSave={(v) => updateKpi('tasaciones', v)} />
