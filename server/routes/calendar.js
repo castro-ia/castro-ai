@@ -188,7 +188,7 @@ router.get('/kpis', async (req, res) => {
       const title = normalize(item.summary);
       if (title.includes('tasacion')) counts.tasaciones += 1;
       else if (title.includes('prelisting')) counts.prelistings += 1;
-      else if (title.includes('captacion') || title.includes('exclusiva')) counts.captaciones += 1;
+      else if (title.includes('autorizacion') || title.includes('captacion')) counts.captaciones += 1;
     }
 
     res.json({ ...counts, month: `${year}-${pad(month)}`, eventCount: (eventsData.items || []).length });
