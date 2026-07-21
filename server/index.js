@@ -4,8 +4,10 @@ import cors from 'cors';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import fs from 'node:fs';
+import cron from 'node-cron';
 
 import calendarRouter from './routes/calendar.js';
+import pushRouter, { sendDailyPush } from './routes/push.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -26,10 +28,17 @@ app.use(cors({ origin: process.env.NODE_ENV === 'production' ? CLIENT_ORIGIN : t
 app.use(express.json());
 
 app.use('/api/calendar', calendarRouter);
+app.use('/api/push', pushRouter);
 
 app.get('/api/health', (_req, res) => {
   res.json({ ok: true });
 });
+
+// Best-effort: si el proceso está despierto a las 7 AM, manda la push solo.
+// En el plan free de Render el servicio se duerme sin tráfico, así que esto no
+// alcanza por sí solo — por eso también existe POST /api/push/trigger para que
+// un cron externo lo despierte y dispare a horario.
+cron.schedule('0 7 * * *', sendDailyPush, { timezone: 'America/Argentina/Buenos_Aires' });
 
 // En producción, este mismo servidor sirve el build estático del client (npm run build --prefix client).
 const clientDist = path.join(__dirname, '..', 'client', 'dist');

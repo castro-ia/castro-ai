@@ -7,11 +7,14 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
+      strategies: 'injectManifest',
+      srcDir: 'src',
+      filename: 'sw.js',
       includeAssets: ['icons/apple-touch-icon.png'],
       manifest: {
         name: 'Castro AI — Team Fernando Castro',
         short_name: 'Castro AI',
-        description: 'Centro de comando con agentes de IA para Team Fernando Castro (RE/MAX).',
+        description: 'Centro de comando personal para Team Fernando Castro (RE/MAX): War Room, Calendario y Tareas.',
         theme_color: '#0A1128',
         background_color: '#0A1128',
         display: 'standalone',
@@ -24,15 +27,12 @@ export default defineConfig({
           { src: '/icons/icon-maskable-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
         ],
       },
-      workbox: {
+      injectManifest: {
         globPatterns: ['**/*.{js,css,html,svg,png,woff2}'],
-        navigateFallbackDenylist: [/^\/api\//],
-        runtimeCaching: [
-          {
-            urlPattern: ({ url }) => url.pathname.startsWith('/api/'),
-            handler: 'NetworkOnly',
-          },
-        ],
+      },
+      devOptions: {
+        enabled: true,
+        type: 'module',
       },
     }),
   ],

@@ -57,3 +57,29 @@ export async function deleteCalendarEvent(eventId) {
     throw new Error(body.error || 'No se pudo borrar el recordatorio del calendario.');
   }
 }
+
+export async function getPushStatus() {
+  const res = await fetch(`${API_URL}/api/push/status`);
+  if (!res.ok) throw new Error('No se pudo consultar el estado de la notificación diaria.');
+  return res.json();
+}
+
+export async function getPushPublicKey() {
+  const res = await fetch(`${API_URL}/api/push/public-key`);
+  const body = await res.json().catch(() => ({}));
+  if (!res.ok) throw new Error(body.error || 'No se pudo obtener la clave pública de notificaciones.');
+  return body.key;
+}
+
+export async function saveSubscription(subscription) {
+  const res = await fetch(`${API_URL}/api/push/subscribe`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(subscription),
+  });
+  if (!res.ok) throw new Error('No se pudo activar la notificación diaria.');
+}
+
+export async function removeSubscription() {
+  await fetch(`${API_URL}/api/push/unsubscribe`, { method: 'POST' });
+}

@@ -127,6 +127,37 @@ Los eventos recurrentes (recordatorios diarios/semanales) no cuentan — solo ev
 
 La vista de **Calendario** usa una clasificación más laxa (negocio vs. personal, solo para el color) con una lista más amplia de palabras — ver `NEGOCIO_KEYWORDS` en [`server/routes/calendar.js`](server/routes/calendar.js) si querés ajustarla.
 
+## 8. Notificación push diaria (opcional)
+
+Todos los días a las 7 AM, si está activada, llega una notificación con la frase del día (Rohn + Biblia) directo a tu iPhone — sin abrir la app.
+
+### 8.1 Generar las claves VAPID (una sola vez)
+
+```bash
+cd server
+npx web-push generate-vapid-keys
+```
+
+Guardá las dos claves:
+
+- **En local** (`server/.env`): `VAPID_PUBLIC_KEY` y `VAPID_PRIVATE_KEY`.
+- **En Render**: las mismas dos, en Environment Variables.
+
+### 8.2 Activarla desde la app
+
+1. Entrá a **Ajustes → Notificación diaria → Activar notificación diaria** y aceptá el permiso de notificaciones.
+2. Solo funciona con la PWA **instalada en pantalla de inicio** (iOS 16.4+) — si la abrís desde Safari sin instalar, iOS no entrega push.
+
+### 8.3 Que dispare a las 7 AM aunque el servicio esté dormido
+
+El servidor ya intenta mandarla solo (`node-cron`, todos los días a las 7 AM hora de Buenos Aires) — pero en el plan **free de Render el servicio se duerme** sin tráfico, y un cron interno no corre si el proceso está dormido. Para que dispare siempre, necesitás algo externo que le pegue a las 7 AM a:
+
+```
+POST https://castro-ai.onrender.com/api/push/trigger
+```
+
+Un cron gratuito de terceros (por ejemplo cron-job.org) sirve para esto — de paso despierta el servicio. Esa parte requiere que **vos** crees la cuenta ahí (no es algo que se pueda hacer por vos). Alternativa: si en algún momento pasás el servicio de Render a un plan pago, el cron interno alcanza solo porque el servicio nunca se duerme.
+
 ## Notas
 
 - Las tareas y los KPIs se guardan en el dispositivo (IndexedDB) — no viajan a ningún servidor más que tu propio backend cuando hablan con Google Calendar.
