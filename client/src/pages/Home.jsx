@@ -1,9 +1,7 @@
 import { Link, useOutletContext } from 'react-router-dom';
 import { MessagesSquare, Menu, ChevronRight, RefreshCw } from 'lucide-react';
-import { agents } from '../config/agents';
 import { brand } from '../config/brand';
 import { useKpis } from '../hooks/useKpis';
-import { AgentCard } from '../components/agents/AgentCard';
 import { KpiCard } from '../components/ui/KpiCard';
 
 function getGreeting() {
@@ -60,8 +58,8 @@ export default function Home() {
             <MessagesSquare size={22} color="white" />
           </div>
           <div className="min-w-0 flex-1">
-            <p className="font-display text-base text-white">Hablar con el Equipo</p>
-            <p className="truncate text-xs text-white/80">El CEO coordina a todo el equipo por vos</p>
+            <p className="font-display text-base text-white">Hablar con el CEO</p>
+            <p className="truncate text-xs text-white/80">Tu consejero estratégico coordina al equipo por vos</p>
           </div>
           <ChevronRight size={20} className="shrink-0 text-white/70" />
         </Link>
@@ -92,7 +90,6 @@ export default function Home() {
         {syncError && <p className="mb-2 text-xs text-red-300">{syncError}</p>}
         <div className="grid grid-cols-2 gap-3">
           <KpiCard label="Prelistings del mes" value={prelistings} onSave={(v) => updateKpi('prelistings', v)} />
-          <KpiCard label="Tasaciones" value={kpis?.tasaciones ?? 0} onSave={(v) => updateKpi('tasaciones', v)} />
           <KpiCard label="Captaciones" value={captaciones} onSave={(v) => updateKpi('captaciones', v)} />
           <KpiCard label="Muestras" value={kpis?.muestras ?? 0} onSave={(v) => updateKpi('muestras', v)} />
           <KpiCard label="Reservas" value={kpis?.reservas ?? 0} onSave={(v) => updateKpi('reservas', v)} />
@@ -108,13 +105,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-6 px-4 pb-4">
-        <h2 className="mb-3 text-sm font-semibold text-white/60">Tu equipo</h2>
-        <div className="flex flex-col gap-2.5">
-          {agents.map((agent) => (
-            <AgentCard key={agent.id} agent={agent} />
-          ))}
-        </div>
+      <section className="mt-6 px-4 pb-8 text-center">
+        <p className="font-display text-sm uppercase tracking-wide text-white/40">
+          Equipo Ganador · {brand.teamName} · El 1 de RE/MAX Palermo
+        </p>
       </section>
     </div>
   );
