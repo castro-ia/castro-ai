@@ -1,118 +1,1827 @@
 [
-  { "texto": "La disciplina es el puente entre las metas y los logros.", "autor": "Jim Rohn", "tipo": "rohn" },
-  { "texto": "Todo lo puedo en Cristo que me fortalece.", "autor": "Filipenses 4:13", "tipo": "biblia" },
-  { "texto": "No desees que sea más fácil; desea ser mejor.", "autor": "Jim Rohn", "tipo": "rohn" },
-  { "texto": "Esfuérzate y sé valiente; no temas ni desmayes.", "autor": "Josué 1:9", "tipo": "biblia" },
-  { "texto": "Tu nivel de éxito rara vez supera tu nivel de desarrollo personal.", "autor": "Jim Rohn", "tipo": "rohn" },
-  { "texto": "El que es fiel en lo muy poco, también en lo más es fiel.", "autor": "Lucas 16:10", "tipo": "biblia" },
-  { "texto": "O diriges el día, o el día te dirige a ti.", "autor": "Jim Rohn", "tipo": "rohn" },
-  { "texto": "Encomienda a Jehová tus obras, y tus pensamientos serán afirmados.", "autor": "Proverbios 16:3", "tipo": "biblia" },
-  { "texto": "La motivación te pone en marcha; el hábito te mantiene en camino.", "autor": "Jim Rohn", "tipo": "rohn" },
-  { "texto": "La mano de los diligentes enriquece.", "autor": "Proverbios 10:4", "tipo": "biblia" },
-  { "texto": "Eres el promedio de las cinco personas con las que más tiempo pasas.", "autor": "Jim Rohn", "tipo": "rohn" },
-  { "texto": "Mejor es el fin del negocio que su principio; mejor es el sufrido de espíritu que el altivo.", "autor": "Eclesiastés 7:8", "tipo": "biblia" },
-  { "texto": "El éxito no es algo que persigues; es algo que atraes por la persona en la que te conviertes.", "autor": "Jim Rohn", "tipo": "rohn" },
-  { "texto": "¿Has visto hombre solícito en su trabajo? Delante de los reyes estará.", "autor": "Proverbios 22:29", "tipo": "biblia" },
-  { "texto": "Trabaja más duro en ti mismo que en tu trabajo.", "autor": "Jim Rohn", "tipo": "rohn" },
-  { "texto": "Y todo lo que hagáis, hacedlo de corazón, como para el Señor.", "autor": "Colosenses 3:23", "tipo": "biblia" },
-  { "texto": "La formación formal te da un ingreso; la autoformación te da una fortuna.", "autor": "Jim Rohn", "tipo": "rohn" },
-  { "texto": "Los pensamientos del diligente ciertamente tienden a la abundancia.", "autor": "Proverbios 21:5", "tipo": "biblia" },
-  { "texto": "Si no diseñás tu propio plan de vida, caerás en el plan de otro.", "autor": "Jim Rohn", "tipo": "rohn" },
-  { "texto": "No nos cansemos de hacer el bien, porque a su tiempo segaremos si no desmayamos.", "autor": "Gálatas 6:9", "tipo": "biblia" },
-  { "texto": "La felicidad no es algo que se pospone para el futuro; es algo que se diseña para el presente.", "autor": "Jim Rohn", "tipo": "rohn" },
-  { "texto": "Por sus frutos los conoceréis.", "autor": "Mateo 7:20", "tipo": "biblia" },
-  { "texto": "No es lo que pasa lo que determina tu vida; es lo que hacés con lo que pasa.", "autor": "Jim Rohn", "tipo": "rohn" },
-  { "texto": "El corazón del hombre piensa su camino; mas Jehová endereza sus pasos.", "autor": "Proverbios 16:9", "tipo": "biblia" },
-  { "texto": "Cuidá tus hábitos: se convierten en tu destino.", "autor": "Jim Rohn (adaptado)", "tipo": "rohn" },
-  { "texto": "Pedid, y se os dará; buscad, y hallaréis; llamad, y se os abrirá.", "autor": "Mateo 7:7", "tipo": "biblia" },
-  { "texto": "Los días son caros. Cuando gastás un día, tenés un día menos para gastar.", "autor": "Jim Rohn", "tipo": "rohn" },
-  { "texto": "Enséñanos de tal modo a contar nuestros días, que traigamos al corazón sabiduría.", "autor": "Salmos 90:12", "tipo": "biblia" },
-  { "texto": "El precio de la disciplina siempre es menor que el dolor del arrepentimiento.", "autor": "Jim Rohn", "tipo": "rohn" },
-  { "texto": "Sé fuerte y valiente, porque Jehová tu Dios estará contigo dondequiera que vayas.", "autor": "Josué 1:9", "tipo": "biblia" },
-  { "texto": "Aprendé a trabajar más en vos que en tu empleo: eso cambia tu ingreso.", "autor": "Jim Rohn", "tipo": "rohn" },
-  { "texto": "Fíate de Jehová de todo tu corazón, y no te apoyes en tu propia prudencia.", "autor": "Proverbios 3:5", "tipo": "biblia" },
-  { "texto": "No podés contratar a otro para que haga tus flexiones por vos.", "autor": "Jim Rohn", "tipo": "rohn" },
-  { "texto": "El alma de los diligentes será prosperada.", "autor": "Proverbios 13:4", "tipo": "biblia" },
-  { "texto": "Cada disciplina afecta a las demás. Cada nueva disciplina te fortalece entero.", "autor": "Jim Rohn", "tipo": "rohn" },
-  { "texto": "Lámpara es a mis pies tu palabra, y lumbrera a mi camino.", "autor": "Salmos 119:105", "tipo": "biblia" },
-  { "texto": "El tiempo es más valioso que el dinero: podés conseguir más dinero, pero no más tiempo.", "autor": "Jim Rohn", "tipo": "rohn" },
-  { "texto": "Este es el día que hizo Jehová; nos gozaremos y alegraremos en él.", "autor": "Salmos 118:24", "tipo": "biblia" },
-  { "texto": "Que las lecciones del pasado sean tu escuela, no tu prisión.", "autor": "Jim Rohn (adaptado)", "tipo": "rohn" },
-  { "texto": "Las misericordias de Jehová son nuevas cada mañana.", "autor": "Lamentaciones 3:22-23", "tipo": "biblia" },
-  { "texto": "Leé libros, asistí a seminarios, rodeate de ganadores: tu mente es tu mayor activo.", "autor": "Jim Rohn (adaptado)", "tipo": "rohn" },
-  { "texto": "Como el hierro se afila con el hierro, el hombre se afila con su amigo.", "autor": "Proverbios 27:17", "tipo": "biblia" },
-  { "texto": "El servicio a muchos conduce a la grandeza.", "autor": "Jim Rohn", "tipo": "rohn" },
-  { "texto": "El que quiera ser grande entre vosotros, será vuestro servidor.", "autor": "Mateo 20:26", "tipo": "biblia" },
-  { "texto": "No pidas menos problemas; pedí más habilidad.", "autor": "Jim Rohn", "tipo": "rohn" },
-  { "texto": "Bienaventurado el varón que soporta la tentación; recibirá la corona de vida.", "autor": "Santiago 1:12", "tipo": "biblia" },
-  { "texto": "Tu vida no mejora por casualidad; mejora con cambio.", "autor": "Jim Rohn", "tipo": "rohn" },
-  { "texto": "Renovaos en el espíritu de vuestra mente.", "autor": "Efesios 4:23", "tipo": "biblia" },
-  { "texto": "Poné metas que te obliguen a convertirte en alguien más grande para alcanzarlas.", "autor": "Jim Rohn (adaptado)", "tipo": "rohn" },
-  { "texto": "Prosigo a la meta, al premio del supremo llamamiento.", "autor": "Filipenses 3:14", "tipo": "biblia" },
-  { "texto": "La palabra fácil no aparece en el contrato del éxito.", "autor": "Jim Rohn (adaptado)", "tipo": "rohn" },
-  { "texto": "Entrad por la puerta estrecha; porque estrecho es el camino que lleva a la vida.", "autor": "Mateo 7:13-14", "tipo": "biblia" },
-  { "texto": "A todos nos llegan dos dolores: el de la disciplina o el del arrepentimiento. Elegí el que pesa gramos.", "autor": "Jim Rohn (adaptado)", "tipo": "rohn" },
-  { "texto": "Ninguna disciplina al presente parece ser causa de gozo, pero después da fruto apacible de justicia.", "autor": "Hebreos 12:11", "tipo": "biblia" },
-  { "texto": "No te conformes con menos de lo que podés ser, hacer y dar.", "autor": "Jim Rohn (adaptado)", "tipo": "rohn" },
-  { "texto": "El que sembrare generosamente, generosamente también segará.", "autor": "2 Corintios 9:6", "tipo": "biblia" },
-  { "texto": "Cuando cambia tu filosofía, cambia todo lo demás.", "autor": "Jim Rohn (adaptado)", "tipo": "rohn" },
-  { "texto": "No os conforméis a este siglo, sino transformaos por medio de la renovación de vuestro entendimiento.", "autor": "Romanos 12:2", "tipo": "biblia" },
-  { "texto": "El invierno siempre llega. Los fuertes no lo maldicen: se preparan.", "autor": "Jim Rohn (adaptado)", "tipo": "rohn" },
-  { "texto": "Todo tiene su tiempo, y todo lo que se quiere debajo del cielo tiene su hora.", "autor": "Eclesiastés 3:1", "tipo": "biblia" },
-  { "texto": "Después del invierno siempre viene la primavera: aprovechala mientras dura.", "autor": "Jim Rohn (adaptado)", "tipo": "rohn" },
-  { "texto": "Los que sembraron con lágrimas, con regocijo segarán.", "autor": "Salmos 126:5", "tipo": "biblia" },
-  { "texto": "El éxito es cuestión de hacer todos los días unas pocas disciplinas simples.", "autor": "Jim Rohn (adaptado)", "tipo": "rohn" },
-  { "texto": "El que recoge en el verano es hombre entendido.", "autor": "Proverbios 10:5", "tipo": "biblia" },
-  { "texto": "El fracaso son unos pocos errores de juicio repetidos todos los días.", "autor": "Jim Rohn", "tipo": "rohn" },
-  { "texto": "Examíname, oh Dios, y conoce mi corazón; pruébame y conoce mis pensamientos.", "autor": "Salmos 139:23", "tipo": "biblia" },
-  { "texto": "Sé agradecido por lo que tenés mientras trabajás por lo que querés.", "autor": "Jim Rohn (adaptado)", "tipo": "rohn" },
-  { "texto": "Dad gracias en todo, porque esta es la voluntad de Dios para con vosotros.", "autor": "1 Tesalonicenses 5:18", "tipo": "biblia" },
-  { "texto": "Las excusas son los clavos con los que se construye la casa del fracaso.", "autor": "Jim Rohn (atribuido)", "tipo": "rohn" },
-  { "texto": "Dice el perezoso: el león está fuera; seré muerto en la calle.", "autor": "Proverbios 22:13", "tipo": "biblia" },
-  { "texto": "Un buen objetivo es como un buen entrenamiento: te estira más allá de lo cómodo.", "autor": "Jim Rohn (adaptado)", "tipo": "rohn" },
-  { "texto": "Ensancha el sitio de tu tienda; alarga tus cuerdas y refuerza tus estacas.", "autor": "Isaías 54:2", "tipo": "biblia" },
-  { "texto": "Cuidá tu cuerpo: es el único lugar que tenés para vivir.", "autor": "Jim Rohn", "tipo": "rohn" },
-  { "texto": "¿No sabéis que vuestro cuerpo es templo del Espíritu Santo?", "autor": "1 Corintios 6:19", "tipo": "biblia" },
-  { "texto": "La comunicación es sacar lo que sabés y ponerlo al servicio de otros.", "autor": "Jim Rohn (adaptado)", "tipo": "rohn" },
-  { "texto": "La blanda respuesta quita la ira; mas la palabra áspera hace subir el furor.", "autor": "Proverbios 15:1", "tipo": "biblia" },
-  { "texto": "No dejes que tu aprendizaje te lleve al conocimiento: que te lleve a la acción.", "autor": "Jim Rohn", "tipo": "rohn" },
-  { "texto": "Sed hacedores de la palabra, y no tan solamente oidores.", "autor": "Santiago 1:22", "tipo": "biblia" },
-  { "texto": "Plantá tu bandera: decidí quién sos y qué no estás dispuesto a negociar.", "autor": "Jim Rohn (adaptado)", "tipo": "rohn" },
-  { "texto": "Pero yo y mi casa serviremos a Jehová.", "autor": "Josué 24:15", "tipo": "biblia" },
-  { "texto": "Un poco de mucho durante mucho tiempo hace la diferencia total.", "autor": "Jim Rohn (adaptado)", "tipo": "rohn" },
-  { "texto": "El que menosprecia el día de las pequeñeces no sabe lo que Dios puede hacer con ellas.", "autor": "Zacarías 4:10 (adaptado)", "tipo": "biblia" },
-  { "texto": "El liderazgo es el desafío de ser más que mediocre.", "autor": "Jim Rohn (adaptado)", "tipo": "rohn" },
-  { "texto": "Vosotros sois la luz del mundo; una ciudad asentada sobre un monte no se puede esconder.", "autor": "Mateo 5:14", "tipo": "biblia" },
-  { "texto": "Ayudá a la gente con sus vidas, no solo con su trabajo.", "autor": "Jim Rohn", "tipo": "rohn" },
-  { "texto": "Sobrellevad los unos las cargas de los otros.", "autor": "Gálatas 6:2", "tipo": "biblia" },
-  { "texto": "Donde vayas, andá con todo tu corazón: media presencia es ausencia.", "autor": "Jim Rohn (adaptado)", "tipo": "rohn" },
-  { "texto": "Todo lo que te viniere a la mano para hacer, hazlo según tus fuerzas.", "autor": "Eclesiastés 9:10", "tipo": "biblia" },
-  { "texto": "La ambición sana es servicio en movimiento: querer más para dar más.", "autor": "Jim Rohn (adaptado)", "tipo": "rohn" },
-  { "texto": "Más bienaventurado es dar que recibir.", "autor": "Hechos 20:35", "tipo": "biblia" },
-  { "texto": "No midas el día por la cosecha, sino por las semillas que plantaste.", "autor": "Robert L. Stevenson (citado por Rohn)", "tipo": "rohn" },
-  { "texto": "Por la mañana siembra tu semilla, y a la tarde no dejes reposar tu mano.", "autor": "Eclesiastés 11:6", "tipo": "biblia" },
-  { "texto": "Convertite en un estudiante serio de tu propio oficio.", "autor": "Jim Rohn (adaptado)", "tipo": "rohn" },
-  { "texto": "Procura con diligencia presentarte a Dios aprobado, como obrero que no tiene de qué avergonzarse.", "autor": "2 Timoteo 2:15", "tipo": "biblia" },
-  { "texto": "Cada día llega con una pregunta: ¿lo vas a invertir o lo vas a gastar?", "autor": "Jim Rohn (adaptado)", "tipo": "rohn" },
-  { "texto": "Mirad, pues, con diligencia cómo andéis; aprovechando bien el tiempo.", "autor": "Efesios 5:15-16", "tipo": "biblia" },
-  { "texto": "Lo que se convierte en tu estándar, se convierte en tu vida. Subí el estándar.", "autor": "Jim Rohn (adaptado)", "tipo": "rohn" },
-  { "texto": "Corramos con paciencia la carrera que tenemos por delante.", "autor": "Hebreos 12:1", "tipo": "biblia" },
-  { "texto": "El descanso también es disciplina: recuperarse es parte del plan del ganador.", "autor": "Jim Rohn (adaptado)", "tipo": "rohn" },
-  { "texto": "Venid a mí todos los que estáis trabajados y cargados, y yo os haré descansar.", "autor": "Mateo 11:28", "tipo": "biblia" },
-  { "texto": "La familia primero: de nada sirve ganar el mercado y perder la mesa de tu casa.", "autor": "Jim Rohn (adaptado)", "tipo": "rohn" },
-  { "texto": "¿Qué aprovechará al hombre si ganare todo el mundo, y perdiere su alma?", "autor": "Marcos 8:36", "tipo": "biblia" },
-  { "texto": "Enseñales a tus hijos con tu ejemplo: es la única clase a la que nunca faltan.", "autor": "Jim Rohn (adaptado)", "tipo": "rohn" },
-  { "texto": "Instruye al niño en su camino, y aun cuando fuere viejo no se apartará de él.", "autor": "Proverbios 22:6", "tipo": "biblia" },
-  { "texto": "Tu reputación es tu mejor campaña de marketing: se construye entrega por entrega.", "autor": "Jim Rohn (adaptado)", "tipo": "rohn" },
-  { "texto": "De más estima es el buen nombre que las muchas riquezas.", "autor": "Proverbios 22:1", "tipo": "biblia" },
-  { "texto": "Los ganadores hacen lo que los perdedores no están dispuestos a hacer.", "autor": "Jim Rohn (atribuido)", "tipo": "rohn" },
-  { "texto": "Ve a la hormiga, oh perezoso, mira sus caminos, y sé sabio.", "autor": "Proverbios 6:6", "tipo": "biblia" },
-  { "texto": "Aprendé a decir no sin culpa: cada no protege un sí más importante.", "autor": "Jim Rohn (adaptado)", "tipo": "rohn" },
-  { "texto": "Sea vuestro hablar: sí, sí; no, no.", "autor": "Mateo 5:37", "tipo": "biblia" },
-  { "texto": "El mercado paga por valor, no por tiempo: aumentá tu valor.", "autor": "Jim Rohn (adaptado)", "tipo": "rohn" },
-  { "texto": "El hombre bueno deja herederos a los hijos de sus hijos.", "autor": "Proverbios 13:22", "tipo": "biblia" },
-  { "texto": "Hoy es el mejor día para empezar: mañana ya tiene su propio trabajo.", "autor": "Jim Rohn (adaptado)", "tipo": "rohn" },
-  { "texto": "No te jactes del día de mañana; porque no sabes qué dará de sí el día.", "autor": "Proverbios 27:1", "tipo": "biblia" },
-  { "texto": "De Rafael Castillo al Hall of Fame: el origen no define el destino, lo define la disciplina.", "autor": "Team Fernando Castro", "tipo": "identidad" },
-  { "texto": "Jehová es mi pastor; nada me faltará.", "autor": "Salmos 23:1", "tipo": "biblia" }
+  {
+    "texto": "La disciplina es el puente entre las metas y los logros.",
+    "autor": "Jim Rohn",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Todo lo puedo en Cristo que me fortalece.",
+    "autor": "Filipenses 4:13",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "No desees que sea más fácil; desea ser mejor.",
+    "autor": "Jim Rohn",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Esfuérzate y sé valiente; no temas ni desmayes.",
+    "autor": "Josué 1:9",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Tu nivel de éxito rara vez supera tu nivel de desarrollo personal.",
+    "autor": "Jim Rohn",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El que es fiel en lo muy poco, también en lo más es fiel.",
+    "autor": "Lucas 16:10",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "O diriges el día, o el día te dirige a ti.",
+    "autor": "Jim Rohn",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Encomienda a Jehová tus obras, y tus pensamientos serán afirmados.",
+    "autor": "Proverbios 16:3",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "La motivación te pone en marcha; el hábito te mantiene en camino.",
+    "autor": "Jim Rohn",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "La mano de los diligentes enriquece.",
+    "autor": "Proverbios 10:4",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Eres el promedio de las cinco personas con las que más tiempo pasas.",
+    "autor": "Jim Rohn",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Mejor es el fin del negocio que su principio; mejor es el sufrido de espíritu que el altivo.",
+    "autor": "Eclesiastés 7:8",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "El éxito no es algo que persigues; es algo que atraes por la persona en la que te conviertes.",
+    "autor": "Jim Rohn",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "¿Has visto hombre solícito en su trabajo? Delante de los reyes estará.",
+    "autor": "Proverbios 22:29",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Trabaja más duro en ti mismo que en tu trabajo.",
+    "autor": "Jim Rohn",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Y todo lo que hagáis, hacedlo de corazón, como para el Señor.",
+    "autor": "Colosenses 3:23",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "La formación formal te da un ingreso; la autoformación te da una fortuna.",
+    "autor": "Jim Rohn",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Los pensamientos del diligente ciertamente tienden a la abundancia.",
+    "autor": "Proverbios 21:5",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Si no diseñás tu propio plan de vida, caerás en el plan de otro.",
+    "autor": "Jim Rohn",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "No nos cansemos de hacer el bien, porque a su tiempo segaremos si no desmayamos.",
+    "autor": "Gálatas 6:9",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "La felicidad no es algo que se pospone para el futuro; es algo que se diseña para el presente.",
+    "autor": "Jim Rohn",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Por sus frutos los conoceréis.",
+    "autor": "Mateo 7:20",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "No es lo que pasa lo que determina tu vida; es lo que hacés con lo que pasa.",
+    "autor": "Jim Rohn",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El corazón del hombre piensa su camino; mas Jehová endereza sus pasos.",
+    "autor": "Proverbios 16:9",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Cuidá tus hábitos: se convierten en tu destino.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Pedid, y se os dará; buscad, y hallaréis; llamad, y se os abrirá.",
+    "autor": "Mateo 7:7",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Los días son caros. Cuando gastás un día, tenés un día menos para gastar.",
+    "autor": "Jim Rohn",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Enséñanos de tal modo a contar nuestros días, que traigamos al corazón sabiduría.",
+    "autor": "Salmos 90:12",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "El precio de la disciplina siempre es menor que el dolor del arrepentimiento.",
+    "autor": "Jim Rohn",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Sé fuerte y valiente, porque Jehová tu Dios estará contigo dondequiera que vayas.",
+    "autor": "Josué 1:9",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Aprendé a trabajar más en vos que en tu empleo: eso cambia tu ingreso.",
+    "autor": "Jim Rohn",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Fíate de Jehová de todo tu corazón, y no te apoyes en tu propia prudencia.",
+    "autor": "Proverbios 3:5",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "No podés contratar a otro para que haga tus flexiones por vos.",
+    "autor": "Jim Rohn",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El alma de los diligentes será prosperada.",
+    "autor": "Proverbios 13:4",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Cada disciplina afecta a las demás. Cada nueva disciplina te fortalece entero.",
+    "autor": "Jim Rohn",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Lámpara es a mis pies tu palabra, y lumbrera a mi camino.",
+    "autor": "Salmos 119:105",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "El tiempo es más valioso que el dinero: podés conseguir más dinero, pero no más tiempo.",
+    "autor": "Jim Rohn",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Este es el día que hizo Jehová; nos gozaremos y alegraremos en él.",
+    "autor": "Salmos 118:24",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Que las lecciones del pasado sean tu escuela, no tu prisión.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Las misericordias de Jehová son nuevas cada mañana.",
+    "autor": "Lamentaciones 3:22-23",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Leé libros, asistí a seminarios, rodeate de ganadores: tu mente es tu mayor activo.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Como el hierro se afila con el hierro, el hombre se afila con su amigo.",
+    "autor": "Proverbios 27:17",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "El servicio a muchos conduce a la grandeza.",
+    "autor": "Jim Rohn",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El que quiera ser grande entre vosotros, será vuestro servidor.",
+    "autor": "Mateo 20:26",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "No pidas menos problemas; pedí más habilidad.",
+    "autor": "Jim Rohn",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Bienaventurado el varón que soporta la tentación; recibirá la corona de vida.",
+    "autor": "Santiago 1:12",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Tu vida no mejora por casualidad; mejora con cambio.",
+    "autor": "Jim Rohn",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Renovaos en el espíritu de vuestra mente.",
+    "autor": "Efesios 4:23",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Poné metas que te obliguen a convertirte en alguien más grande para alcanzarlas.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Prosigo a la meta, al premio del supremo llamamiento.",
+    "autor": "Filipenses 3:14",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "La palabra fácil no aparece en el contrato del éxito.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Entrad por la puerta estrecha; porque estrecho es el camino que lleva a la vida.",
+    "autor": "Mateo 7:13-14",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "A todos nos llegan dos dolores: el de la disciplina o el del arrepentimiento. Elegí el que pesa gramos.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Ninguna disciplina al presente parece ser causa de gozo, pero después da fruto apacible de justicia.",
+    "autor": "Hebreos 12:11",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "No te conformes con menos de lo que podés ser, hacer y dar.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El que sembrare generosamente, generosamente también segará.",
+    "autor": "2 Corintios 9:6",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Cuando cambia tu filosofía, cambia todo lo demás.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "No os conforméis a este siglo, sino transformaos por medio de la renovación de vuestro entendimiento.",
+    "autor": "Romanos 12:2",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "El invierno siempre llega. Los fuertes no lo maldicen: se preparan.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Todo tiene su tiempo, y todo lo que se quiere debajo del cielo tiene su hora.",
+    "autor": "Eclesiastés 3:1",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Después del invierno siempre viene la primavera: aprovechala mientras dura.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Los que sembraron con lágrimas, con regocijo segarán.",
+    "autor": "Salmos 126:5",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "El éxito es cuestión de hacer todos los días unas pocas disciplinas simples.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El que recoge en el verano es hombre entendido.",
+    "autor": "Proverbios 10:5",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "El fracaso son unos pocos errores de juicio repetidos todos los días.",
+    "autor": "Jim Rohn",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Examíname, oh Dios, y conoce mi corazón; pruébame y conoce mis pensamientos.",
+    "autor": "Salmos 139:23",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Sé agradecido por lo que tenés mientras trabajás por lo que querés.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Dad gracias en todo, porque esta es la voluntad de Dios para con vosotros.",
+    "autor": "1 Tesalonicenses 5:18",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Las excusas son los clavos con los que se construye la casa del fracaso.",
+    "autor": "Jim Rohn (atribuido)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Dice el perezoso: el león está fuera; seré muerto en la calle.",
+    "autor": "Proverbios 22:13",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Un buen objetivo es como un buen entrenamiento: te estira más allá de lo cómodo.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Ensancha el sitio de tu tienda; alarga tus cuerdas y refuerza tus estacas.",
+    "autor": "Isaías 54:2",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Cuidá tu cuerpo: es el único lugar que tenés para vivir.",
+    "autor": "Jim Rohn",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "¿No sabéis que vuestro cuerpo es templo del Espíritu Santo?",
+    "autor": "1 Corintios 6:19",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "La comunicación es sacar lo que sabés y ponerlo al servicio de otros.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "La blanda respuesta quita la ira; mas la palabra áspera hace subir el furor.",
+    "autor": "Proverbios 15:1",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "No dejes que tu aprendizaje te lleve al conocimiento: que te lleve a la acción.",
+    "autor": "Jim Rohn",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Sed hacedores de la palabra, y no tan solamente oidores.",
+    "autor": "Santiago 1:22",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Plantá tu bandera: decidí quién sos y qué no estás dispuesto a negociar.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Pero yo y mi casa serviremos a Jehová.",
+    "autor": "Josué 24:15",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Un poco de mucho durante mucho tiempo hace la diferencia total.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El que menosprecia el día de las pequeñeces no sabe lo que Dios puede hacer con ellas.",
+    "autor": "Zacarías 4:10 (adaptado)",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "El liderazgo es el desafío de ser más que mediocre.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Vosotros sois la luz del mundo; una ciudad asentada sobre un monte no se puede esconder.",
+    "autor": "Mateo 5:14",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Ayudá a la gente con sus vidas, no solo con su trabajo.",
+    "autor": "Jim Rohn",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Sobrellevad los unos las cargas de los otros.",
+    "autor": "Gálatas 6:2",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Donde vayas, andá con todo tu corazón: media presencia es ausencia.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Todo lo que te viniere a la mano para hacer, hazlo según tus fuerzas.",
+    "autor": "Eclesiastés 9:10",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "La ambición sana es servicio en movimiento: querer más para dar más.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Más bienaventurado es dar que recibir.",
+    "autor": "Hechos 20:35",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "No midas el día por la cosecha, sino por las semillas que plantaste.",
+    "autor": "Robert L. Stevenson (citado por Rohn)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Por la mañana siembra tu semilla, y a la tarde no dejes reposar tu mano.",
+    "autor": "Eclesiastés 11:6",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Convertite en un estudiante serio de tu propio oficio.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Procura con diligencia presentarte a Dios aprobado, como obrero que no tiene de qué avergonzarse.",
+    "autor": "2 Timoteo 2:15",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Cada día llega con una pregunta: ¿lo vas a invertir o lo vas a gastar?",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Mirad, pues, con diligencia cómo andéis; aprovechando bien el tiempo.",
+    "autor": "Efesios 5:15-16",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Lo que se convierte en tu estándar, se convierte en tu vida. Subí el estándar.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Corramos con paciencia la carrera que tenemos por delante.",
+    "autor": "Hebreos 12:1",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "El descanso también es disciplina: recuperarse es parte del plan del ganador.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Venid a mí todos los que estáis trabajados y cargados, y yo os haré descansar.",
+    "autor": "Mateo 11:28",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "La familia primero: de nada sirve ganar el mercado y perder la mesa de tu casa.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "¿Qué aprovechará al hombre si ganare todo el mundo, y perdiere su alma?",
+    "autor": "Marcos 8:36",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Enseñales a tus hijos con tu ejemplo: es la única clase a la que nunca faltan.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Instruye al niño en su camino, y aun cuando fuere viejo no se apartará de él.",
+    "autor": "Proverbios 22:6",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Tu reputación es tu mejor campaña de marketing: se construye entrega por entrega.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "De más estima es el buen nombre que las muchas riquezas.",
+    "autor": "Proverbios 22:1",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Los ganadores hacen lo que los perdedores no están dispuestos a hacer.",
+    "autor": "Jim Rohn (atribuido)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Ve a la hormiga, oh perezoso, mira sus caminos, y sé sabio.",
+    "autor": "Proverbios 6:6",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Aprendé a decir no sin culpa: cada no protege un sí más importante.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Sea vuestro hablar: sí, sí; no, no.",
+    "autor": "Mateo 5:37",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "El mercado paga por valor, no por tiempo: aumentá tu valor.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El hombre bueno deja herederos a los hijos de sus hijos.",
+    "autor": "Proverbios 13:22",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Hoy es el mejor día para empezar: mañana ya tiene su propio trabajo.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "No te jactes del día de mañana; porque no sabes qué dará de sí el día.",
+    "autor": "Proverbios 27:1",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "De Rafael Castillo al Lifetime Achievement: hoy vivo en abundancia en mi depto de Palermo, y lo construí con disciplina.",
+    "autor": "Team Fernando Castro",
+    "tipo": "identidad"
+  },
+  {
+    "texto": "Jehová es mi pastor; nada me faltará.",
+    "autor": "Salmos 23:1",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Reconócelo en todos tus caminos, y él enderezará tus veredas.",
+    "autor": "Proverbios 3:6",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "La mano de los diligentes señoreará; mas la negligencia será tributaria.",
+    "autor": "Proverbios 12:24",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "En toda labor hay fruto, mas las vanas palabras de los labios empobrecen.",
+    "autor": "Proverbios 14:23",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Muchos pensamientos hay en el corazón del hombre; mas el consejo de Jehová permanecerá.",
+    "autor": "Proverbios 19:21",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Prepara tus labores fuera, y disponlas en tus campos, y después edificarás tu casa.",
+    "autor": "Proverbios 24:27",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Sé diligente en conocer el estado de tus ovejas, y mira con cuidado por tus rebaños.",
+    "autor": "Proverbios 27:23",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Ciñe de fuerza sus lomos, y esfuerza sus brazos.",
+    "autor": "Proverbios 31:17",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Será como el árbol plantado junto a corrientes de aguas, que da su fruto en su tiempo.",
+    "autor": "Salmos 1:3",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Aguarda a Jehová; esfuérzate, y aliéntese tu corazón.",
+    "autor": "Salmos 27:14",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Deléitate asimismo en Jehová, y él te concederá las peticiones de tu corazón.",
+    "autor": "Salmos 37:4",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Encomienda a Jehová tu camino, y confía en él; y él hará.",
+    "autor": "Salmos 37:5",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Dios es nuestro amparo y fortaleza, nuestro pronto auxilio en las tribulaciones.",
+    "autor": "Salmos 46:1",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Echa sobre Jehová tu carga, y él te sustentará.",
+    "autor": "Salmos 55:22",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Esperad en él en todo tiempo, oh pueblos; derramad delante de él vuestro corazón.",
+    "autor": "Salmos 62:8",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "No quitará el bien a los que andan en integridad.",
+    "autor": "Salmos 84:11",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "El justo florecerá como la palmera; crecerá como cedro en el Líbano.",
+    "autor": "Salmos 92:12",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "El hombre de bien tiene misericordia, y presta; gobierna sus asuntos con juicio.",
+    "autor": "Salmos 112:5",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Alzaré mis ojos a los montes; ¿de dónde vendrá mi socorro? Mi socorro viene de Jehová.",
+    "autor": "Salmos 121:1-2",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Si Jehová no edificare la casa, en vano trabajan los que la edifican.",
+    "autor": "Salmos 127:1",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Cuando comieres el trabajo de tus manos, bienaventurado serás, y te irá bien.",
+    "autor": "Salmos 128:2",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Jehová cumplirá su propósito en mí.",
+    "autor": "Salmos 138:8",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Los ojos de todos esperan en ti, y tú les das su comida a su tiempo.",
+    "autor": "Salmos 145:15",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Los que esperan a Jehová tendrán nuevas fuerzas; levantarán alas como las águilas.",
+    "autor": "Isaías 40:31",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "No temas, porque yo estoy contigo; no desmayes, porque yo soy tu Dios.",
+    "autor": "Isaías 41:10",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "He aquí que yo hago cosa nueva; pronto saldrá a luz.",
+    "autor": "Isaías 43:19",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Yo sé los pensamientos que tengo acerca de vosotros, pensamientos de paz, y no de mal.",
+    "autor": "Jeremías 29:11",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Bendito el varón que confía en Jehová, y cuya confianza es Jehová.",
+    "autor": "Jeremías 17:7",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Jehová el Señor es mi fortaleza, el cual hace mis pies como de ciervas.",
+    "autor": "Habacuc 3:19",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Esforzaos y cobrad ánimo; no temáis, ni tengáis miedo.",
+    "autor": "Deuteronomio 31:6",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Acuérdate de Jehová tu Dios, porque él te da el poder para hacer las riquezas.",
+    "autor": "Deuteronomio 8:18",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Vio su amo que Jehová estaba con José, y que todo lo que él hacía, Jehová lo hacía prosperar en su mano.",
+    "autor": "Génesis 39:3",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "El gozo de Jehová es vuestra fuerza.",
+    "autor": "Nehemías 8:10",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Edificamos, pues, el muro, porque el pueblo tuvo ánimo para trabajar.",
+    "autor": "Nehemías 4:6",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Sea, pues, perfecto vuestro corazón para con Jehová nuestro Dios.",
+    "autor": "1 Reyes 8:61",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Jehová recompense tu obra, y tu remuneración sea cumplida de parte de Jehová.",
+    "autor": "Rut 2:12",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Aunque tu principio haya sido pequeño, tu postrer estado será muy grande.",
+    "autor": "Job 8:7",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Vuelve ahora en amistad con él, y tendrás paz; y por ello te vendrá bien.",
+    "autor": "Job 22:21",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "A todo hombre a quien Dios da riquezas y bienes, esto es don de Dios.",
+    "autor": "Eclesiastés 5:19",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Mejores son dos que uno; porque tienen mejor paga de su trabajo.",
+    "autor": "Eclesiastés 4:9",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Por la pereza se cae la techumbre, y por la flojedad de las manos se llueve la casa.",
+    "autor": "Eclesiastés 10:18",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Buscad primeramente el reino de Dios y su justicia, y todas estas cosas os serán añadidas.",
+    "autor": "Mateo 6:33",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Porque donde esté vuestro tesoro, allí estará también vuestro corazón.",
+    "autor": "Mateo 6:21",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Bien, buen siervo y fiel; sobre poco has sido fiel, sobre mucho te pondré.",
+    "autor": "Mateo 25:21",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Alumbre vuestra luz delante de los hombres, para que vean vuestras buenas obras.",
+    "autor": "Mateo 5:16",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Dad, y se os dará; medida buena, apretada, remecida y rebosando darán en vuestro seno.",
+    "autor": "Lucas 6:38",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Al que mucho se le dio, mucho se le demandará.",
+    "autor": "Lucas 12:48",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "¿Quién de vosotros, queriendo edificar una torre, no se sienta primero y calcula los gastos?",
+    "autor": "Lucas 14:28",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "El que permanece en mí, y yo en él, este lleva mucho fruto.",
+    "autor": "Juan 15:5",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "La paz os dejo, mi paz os doy; no se turbe vuestro corazón, ni tenga miedo.",
+    "autor": "Juan 14:27",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "En él vivimos, y nos movemos, y somos.",
+    "autor": "Hechos 17:28",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Sabemos que a los que aman a Dios, todas las cosas les ayudan a bien.",
+    "autor": "Romanos 8:28",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "En lo que requiere diligencia, no perezosos; fervientes en espíritu, sirviendo al Señor.",
+    "autor": "Romanos 12:11",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Gozosos en la esperanza; sufridos en la tribulación; constantes en la oración.",
+    "autor": "Romanos 12:12",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Si, pues, coméis o bebéis, o hacéis otra cosa, hacedlo todo para la gloria de Dios.",
+    "autor": "1 Corintios 10:31",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Estad firmes y constantes, creciendo en la obra del Señor siempre.",
+    "autor": "1 Corintios 15:58",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Porque por fe andamos, no por vista.",
+    "autor": "2 Corintios 5:7",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Aunque el hombre exterior se va desgastando, el interior no obstante se renueva de día en día.",
+    "autor": "2 Corintios 4:16",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Cada uno someta a prueba su propia obra, y entonces tendrá motivo de gloriarse.",
+    "autor": "Gálatas 6:4",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Somos hechura suya, creados en Cristo Jesús para buenas obras.",
+    "autor": "Efesios 2:10",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Servid de buena voluntad, como al Señor y no a los hombres.",
+    "autor": "Efesios 6:7",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Por nada estéis afanosos, sino sean conocidas vuestras peticiones delante de Dios.",
+    "autor": "Filipenses 4:6",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "He aprendido a contentarme, cualquiera que sea mi situación.",
+    "autor": "Filipenses 4:11",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Mi Dios, pues, suplirá todo lo que os falta conforme a sus riquezas en gloria.",
+    "autor": "Filipenses 4:19",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Todo lo que hacéis, sea de palabra o de hecho, hacedlo todo en el nombre del Señor Jesús.",
+    "autor": "Colosenses 3:17",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Que procuréis tener tranquilidad, y ocuparos en vuestros negocios, y trabajar con vuestras manos.",
+    "autor": "1 Tesalonicenses 4:11",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Y vosotros, hermanos, no os canséis de hacer bien.",
+    "autor": "2 Tesalonicenses 3:13",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Gran ganancia es la piedad acompañada de contentamiento.",
+    "autor": "1 Timoteo 6:6",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "No nos ha dado Dios espíritu de cobardía, sino de poder, de amor y de dominio propio.",
+    "autor": "2 Timoteo 1:7",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Tened por sumo gozo cuando os halléis en diversas pruebas, sabiendo que la prueba produce paciencia.",
+    "autor": "Santiago 1:2-3",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Si alguno de vosotros tiene falta de sabiduría, pídala a Dios, el cual da a todos abundantemente.",
+    "autor": "Santiago 1:5",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Humillaos delante del Señor, y él os exaltará.",
+    "autor": "Santiago 4:10",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Echando toda vuestra ansiedad sobre él, porque él tiene cuidado de vosotros.",
+    "autor": "1 Pedro 5:7",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Hijitos míos, no amemos de palabra ni de lengua, sino de hecho y en verdad.",
+    "autor": "1 Juan 3:18",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "He puesto delante de ti una puerta abierta, la cual nadie puede cerrar.",
+    "autor": "Apocalipsis 3:8",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Oirá el sabio, y aumentará el saber, y el entendido adquirirá consejo.",
+    "autor": "Proverbios 1:5",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Jehová da la sabiduría, y de su boca viene el conocimiento y la inteligencia.",
+    "autor": "Proverbios 2:6",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Sabiduría ante todo; adquiere sabiduría; y sobre todas tus posesiones adquiere inteligencia.",
+    "autor": "Proverbios 4:7",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Donde no hay dirección sabia, el pueblo cae; mas en la multitud de consejeros hay seguridad.",
+    "autor": "Proverbios 11:14",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "El alma generosa será prosperada; y el que saciare, él también será saciado.",
+    "autor": "Proverbios 11:25",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "El que labra su tierra se saciará de pan; mas el que sigue a los ociosos es falto de entendimiento.",
+    "autor": "Proverbios 12:11",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Los pensamientos son frustrados donde no hay consejo; mas en la multitud de consejeros se afirman.",
+    "autor": "Proverbios 15:22",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "El entendido en la palabra hallará el bien, y el que confía en Jehová es bienaventurado.",
+    "autor": "Proverbios 16:20",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "El corazón entendido adquiere sabiduría; y el oído de los sabios busca la ciencia.",
+    "autor": "Proverbios 18:15",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Escucha el consejo, y recibe la corrección, para que seas sabio en tu vejez.",
+    "autor": "Proverbios 19:20",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "No ames el sueño, para que no te empobrezcas; abre tus ojos, y te saciarás de pan.",
+    "autor": "Proverbios 20:13",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "El caballo se alista para el día de la batalla; mas Jehová es el que da la victoria.",
+    "autor": "Proverbios 21:31",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Siete veces cae el justo, y vuelve a levantarse.",
+    "autor": "Proverbios 24:16",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "El que labra su tierra se saciará de pan; mas el que sigue a los vagabundos se saciará de pobreza.",
+    "autor": "Proverbios 28:19",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Sin profecía el pueblo se desenfrena; mas el que guarda la ley es bienaventurado.",
+    "autor": "Proverbios 29:18",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Fuerza y honor son su vestidura; y se ríe de lo por venir.",
+    "autor": "Proverbios 31:25",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Andad sabiamente para con los de afuera, redimiendo el tiempo.",
+    "autor": "Colosenses 4:5",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Te haré entender, y te enseñaré el camino en que debes andar.",
+    "autor": "Salmos 32:8",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Gustad, y ved que es bueno Jehová; dichoso el hombre que confía en él.",
+    "autor": "Salmos 34:8",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Por Jehová son ordenados los pasos del hombre.",
+    "autor": "Salmos 37:23",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Mi carne y mi corazón desfallecen; mas la roca de mi corazón y mi porción es Dios para siempre.",
+    "autor": "Salmos 73:26",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "El que habita al abrigo del Altísimo morará bajo la sombra del Omnipotente.",
+    "autor": "Salmos 91:1",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Servid a Jehová con alegría; venid ante su presencia con regocijo.",
+    "autor": "Salmos 100:2",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Bendice, alma mía, a Jehová, y no olvides ninguno de sus beneficios.",
+    "autor": "Salmos 103:2",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Mejor es confiar en Jehová que confiar en el hombre.",
+    "autor": "Salmos 118:8",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "En mi corazón he guardado tus dichos, para no pecar contra ti.",
+    "autor": "Salmos 119:11",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "La exposición de tus palabras alumbra; hace entender a los simples.",
+    "autor": "Salmos 119:130",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Mirad cuán bueno y cuán delicioso es habitar los hermanos juntos en armonía.",
+    "autor": "Salmos 133:1",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Hazme oír por la mañana tu misericordia, porque en ti he confiado.",
+    "autor": "Salmos 143:8",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Grande es el Señor nuestro, y de mucho poder; y su entendimiento es infinito.",
+    "autor": "Salmos 147:5",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Tú guardarás en completa paz a aquel cuyo pensamiento en ti persevera.",
+    "autor": "Isaías 26:3",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Este es el camino, andad por él; y no echéis a la mano derecha, ni tampoco torzáis a la mano izquierda.",
+    "autor": "Isaías 30:21",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Porque mis pensamientos no son vuestros pensamientos, ni vuestros caminos mis caminos, dice Jehová.",
+    "autor": "Isaías 55:8-9",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Clama a mí, y yo te responderé, y te enseñaré cosas grandes y ocultas.",
+    "autor": "Jeremías 33:3",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Solamente hacer justicia, y amar misericordia, y humillarte ante tu Dios.",
+    "autor": "Miqueas 6:8",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Traed todos los diezmos al alfolí, y probadme ahora en esto, dice Jehová de los ejércitos.",
+    "autor": "Malaquías 3:10",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Al que cree todo le es posible.",
+    "autor": "Marcos 9:23",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Todo lo que pidiereis orando, creed que lo recibiréis, y os vendrá.",
+    "autor": "Marcos 11:24",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Si en las riquezas injustas no fuisteis fieles, ¿quién os confiará lo verdadero?",
+    "autor": "Lucas 16:11",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Con vuestra paciencia ganaréis vuestras almas.",
+    "autor": "Lucas 21:19",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Que os améis unos a otros; como yo os he amado.",
+    "autor": "Juan 13:34",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "En el mundo tendréis aflicción; pero confiad, yo he vencido al mundo.",
+    "autor": "Juan 16:33",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Doy mi vida por preciosa, a fin de acabar mi carrera con gozo.",
+    "autor": "Hechos 20:24",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "La tribulación produce paciencia; y la paciencia, prueba; y la prueba, esperanza.",
+    "autor": "Romanos 5:3-4",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Y el Dios de esperanza os llene de todo gozo y paz en el creer.",
+    "autor": "Romanos 15:13",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Porque nosotros somos colaboradores de Dios, y vosotros sois labranza de Dios.",
+    "autor": "1 Corintios 3:9",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Corred de tal manera que lo obtengáis.",
+    "autor": "1 Corintios 9:24",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Y ahora permanecen la fe, la esperanza y el amor, estos tres; pero el mayor de ellos es el amor.",
+    "autor": "1 Corintios 13:13",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "No que seamos competentes por nosotros mismos, sino que nuestra competencia proviene de Dios.",
+    "autor": "2 Corintios 3:5",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Poderoso es Dios para hacer que abunde en vosotros toda gracia.",
+    "autor": "2 Corintios 9:8",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Y a Aquel que es poderoso para hacer todas las cosas mucho más abundantemente de lo que pedimos o entendemos.",
+    "autor": "Efesios 3:20",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "El que comenzó en vosotros la buena obra, la perfeccionará hasta el día de Jesucristo.",
+    "autor": "Filipenses 1:6",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Porque Dios es el que en vosotros produce así el querer como el hacer.",
+    "autor": "Filipenses 2:13",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Es, pues, la fe la certeza de lo que se espera, la convicción de lo que no se ve.",
+    "autor": "Hebreos 11:1",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "Bienaventurado el varón que en la ley de Jehová medita de día y de noche.",
+    "autor": "Salmos 1:1-2",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "El que confía en su propia riqueza caerá; mas los justos reverdecerán como ramas.",
+    "autor": "Proverbios 11:28",
+    "tipo": "biblia"
+  },
+  {
+    "texto": "El éxito es un puñado de disciplinas practicadas todos los días.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "No esperes a tener ganas: la disciplina actúa aunque no haya motivación.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Cada llamada que no hacés hoy, alguien más la va a hacer mañana.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El mercado no te debe nada: te paga por el valor que entregás.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Un plan sin acción es solo un deseo con buena letra.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "La constancia le gana a la intensidad casi siempre.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "No se trata de tener tiempo, se trata de decidir qué importa más.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El cliente no compra tu producto, compra la confianza que le diste.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Cuidá la primera hora del día: ahí se decide el resto.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Los resultados de este mes ya se sembraron el mes pasado.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Nadie te va a exigir más de lo que vos mismo aceptás.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "La reputación se construye en años y se pierde en un llamado sin responder.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "No compitas por precio: compite por servicio.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El que no hace seguimiento, regala sus propias oportunidades.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Cada objeción es una pregunta disfrazada: escuchala antes de responderla.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Trabajá como si el cliente estuviera mirando, aunque nadie esté mirando.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "La disciplina de hoy es la libertad de mañana.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Un problema bien definido ya está medio resuelto.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El miedo a llamar cuesta más caro que el rechazo mismo.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "No hay atajos para la confianza: se gana entrega por entrega.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Medí lo que importa, no solo lo que es fácil de medir.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "La energía que le ponés a la mañana define la tarde.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Un objetivo sin fecha es solo una buena intención.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El que se prepara mientras otros esperan, gana antes de competir.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "La venta empieza mucho antes de la firma: empieza en la confianza.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "No es cuestión de talento, es cuestión de repetición inteligente.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Cada 'no' te acerca al 'sí' si aprendés algo de él.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El liderazgo se nota en cómo tratás a quien no te puede devolver nada.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "La organización no es perfeccionismo: es respeto por tu propio tiempo.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Quien cuida los detalles pequeños, gana los contratos grandes.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "No confundas estar ocupado con estar avanzando.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El cliente recuerda cómo lo hiciste sentir, no cuánto hablaste.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Una base de datos bien cuidada vale más que mil publicaciones.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El seguimiento constante convierte contactos fríos en clientes calientes.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Cada semana tiene su propio marcador: no dejes que se acumule la deuda.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El profesionalismo se ve en los días en que no tenés ganas.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Nadie recuerda al que llegó primero, recuerdan al que cerró mejor.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "La zona de confort no paga comisiones.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Tu agenda es el mapa de tus verdaderas prioridades.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El que no pide referidos, no los recibe.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Cerrar una venta empieza por cerrar tu propia mente a la duda.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El detalle que nadie pidió es el que se recuerda para siempre.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "La constancia en redes construye lo que la suerte nunca sostiene.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Un cliente bien atendido vale más que diez leads mal trabajados.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "No hay temporada mala para el que trabaja bien todo el año.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El precio de no capacitarte lo pagás en cada negociación perdida.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "La disciplina financiera personal se nota en la seguridad con la que negociás.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Cada propiedad que mostrás es una oportunidad de aprender algo nuevo del mercado.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El que se queja del mercado, no está trabajando el mercado.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Una autorización de venta firmada empieza con una conversación honesta.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El respeto se gana llegando a horario, incluso a las reuniones chicas.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "No hay negocio que resista una mala primera impresión.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El networking real es ayudar antes de necesitar algo.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "La claridad en el objetivo evita perder el año en tareas urgentes pero no importantes.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Un 'todavía no' del cliente no es un 'nunca'.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "La paciencia con el proceso es lo que distingue al profesional del oportunista.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Cuidá cómo cerrás cada conversación: ahí queda la puerta abierta o cerrada.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El descanso planificado rinde más que el cansancio acumulado.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Nadie construye un equipo ganador copiando al que menos exige.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "La disciplina de los domingos define los resultados de los lunes.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Cada objeción resuelta bien es una historia que podés contar después.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El buen vendedor pregunta más de lo que habla.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Un cliente conforme es publicidad; un cliente encantado es una cartera nueva.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "La constancia en el gimnasio se nota en la constancia con los clientes.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El que anota sus números, los mejora; el que no, los repite.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Cerrar bien un mes malo empieza por no repetir los mismos errores.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "La humildad para pedir ayuda acelera lo que el orgullo demora.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "No hay excusa que compense una llamada que no se hizo.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El foco es decir que no a lo bueno para decir que sí a lo importante.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Una meta compartida con el equipo pesa menos que una meta cargada solo.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El profesionalismo empieza por cómo hablás de tu trabajo cuando nadie te escucha.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "La confianza del cliente se construye antes de necesitarla.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Cada mes cierra con lo que sembraste, no con lo que quisiste sembrar.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El que se actualiza, negocia mejor; el que no, negocia con miedo.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Una buena pregunta vale más que un buen argumento.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El trabajo en equipo multiplica lo que el ego individual divide.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "La energía se contagia: llevá la tuya a cada reunión.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El que planifica su semana el domingo, gana el lunes antes de empezar.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Cuidar los contratos chicos de hoy construye los grandes de mañana.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "No hay cliente difícil, hay expectativas mal conversadas desde el principio.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El éxito sostenido se parece más a la rutina que a la inspiración.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Escuchá el silencio del cliente: a veces dice más que sus palabras.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "La reputación online se construye con la misma disciplina que la offline.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El que entrena su argumento de venta, no improvisa cuando más importa.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Una negociación ganada sin cuidar la relación es una venta perdida a futuro.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El tiempo que le das a tu familia también es una inversión de negocio.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "La disciplina no elimina el cansancio, pero elige qué hacer con él.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Cada cliente satisfecho es un vendedor tuyo que no cobra comisión.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El que se compromete en público, cumple con más disciplina.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "La excelencia en lo chico construye la confianza para lo grande.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "No hay estrategia que reemplace la constancia diaria.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El buen líder pregunta antes de asumir.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Cuidá tu palabra: en este negocio, es tu activo más valioso.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El crecimiento incómodo de hoy es la comodidad ganada de mañana.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Cada objeción que anotás y estudiás, la próxima vez la resolvés mejor.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El que celebra los logros chicos, sostiene el ánimo para los grandes.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Una agenda ordenada libera la cabeza para pensar mejor.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El respeto por el tiempo ajeno es el primer paso de cualquier negociación.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "La disciplina de hoy paga la libertad de diciembre.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El que aprende de cada cierre, mejora el próximo antes de empezarlo.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Nadie gana la confianza del mercado de un día para el otro.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El foco en el cliente correcto vale más que el volumen de contactos.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Una buena mañana de trabajo vale más que una tarde de excusas.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El que se anticipa al problema, negocia desde la calma.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "La disciplina de seguimiento convierte prospectos en referidos.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Cada operación cerrada bien deja una relación abierta para la próxima.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El profesional se mide en cómo maneja el 'no', no el 'sí'.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Una meta clara ordena hasta el día más caótico.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El que cuida los pequeños detalles de una propiedad, gana la confianza del propietario.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "La consistencia en el trato vale más que la intensidad de un solo día.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El que negocia desde la abundancia, negocia mejor que el que negocia desde la necesidad.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Cada tasación bien hecha es una carta de presentación para la próxima.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El buen equipo se construye con la misma disciplina que un buen cliente.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "La paciencia con el proceso de venta es lo que distingue al que dura en esto.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El que cuida su energía, cuida también la calidad de sus decisiones.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "Cada semana sin números anotados es una semana sin aprender del todo.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El respeto genuino por el tiempo del cliente abre más puertas que cualquier técnica.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "La disciplina personal se refleja en la calidad de cada negociación.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  },
+  {
+    "texto": "El que se prepara en la calma, responde mejor en la urgencia.",
+    "autor": "Jim Rohn (adaptado)",
+    "tipo": "rohn"
+  }
 ]
