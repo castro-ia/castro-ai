@@ -6,6 +6,7 @@ import { KpiCard } from '../components/ui/KpiCard';
 import Goals2026 from '../components/Goals2026';
 import ConversionSemaforo from '../components/ConversionSemaforo';
 import FridayCheckin from '../components/FridayCheckin';
+import TypewriterFocus from '../components/TypewriterFocus';
 import frases from '../data/frases.json';
 import { dayOfYear } from '../lib/castroStore';
 
@@ -63,6 +64,10 @@ export default function Home() {
       </header>
 
       <section className="-mt-3 px-4">
+        <TypewriterFocus />
+      </section>
+
+      <section className="mt-3 px-4">
         <Link
           to="/calendario"
           className="flex items-center gap-3 rounded-2xl bg-remax-gradient p-4 shadow-block transition active:scale-[0.98]"
