@@ -1,24 +1,15 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import frases from "../data/frases.json";
-import {
-  loadData,
-  saveData,
-  todayISO,
-  dayOfYear,
-  formatUSD,
-} from "../lib/castroStore";
+import { loadData, dayOfYear, formatUSD } from "../lib/castroStore";
 
 /**
- * MorningBrief — pantalla de arranque de día.
+ * MorningBrief — pantalla de arranque, se muestra cada vez que se abre la app.
  *
  * Props:
  *  - events: array de eventos de HOY del Google Calendar (opcional).
  *            Formato esperado: [{ summary: "Prelisting Beruti 3244", start: "10:30" }, ...]
  *            Si ya tenés los eventos parseados para los KPIs, pasalos acá filtrados por hoy.
  *  - onClose: callback para cerrar el brief y pasar al War Room.
- *
- * Se muestra solo la PRIMERA vez que se abre la app cada día (guarda lastBriefDate).
- * Para forzarlo en desarrollo: localStorage.removeItem("castro:lastBriefDate")
  */
 export default function MorningBrief({ events = [], onClose }) {
   const frase = frases[dayOfYear() % frases.length];
@@ -36,11 +27,6 @@ export default function MorningBrief({ events = [], onClose }) {
   }
 
   const topEvents = events.slice(0, 3);
-
-  function handleClose() {
-    saveData("lastBriefDate", todayISO());
-    onClose?.();
-  }
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#05070f] px-4">
@@ -116,7 +102,7 @@ export default function MorningBrief({ events = [], onClose }) {
         )}
 
         <button
-          onClick={handleClose}
+          onClick={onClose}
           className="w-full rounded-2xl bg-gradient-to-r from-[#003DA5] to-[#DC1C2E] py-4 text-white font-bold shadow-[3px_3px_0_rgba(0,0,0,0.6)] active:translate-y-[2px] transition-transform"
         >
           A trabajar →
@@ -127,16 +113,12 @@ export default function MorningBrief({ events = [], onClose }) {
 }
 
 /**
- * Hook para decidir si mostrar el brief.
+ * Hook para decidir si mostrar el brief: se muestra cada vez que se monta la app
+ * (cada apertura), no solo una vez por día.
  * Uso en App.jsx:
  *   const [showBrief, setShowBrief] = useMorningBrief();
  *   {showBrief && <MorningBrief events={eventosDeHoy} onClose={() => setShowBrief(false)} />}
  */
 export function useMorningBrief() {
-  const [show, setShow] = useState(false);
-  useEffect(() => {
-    const last = loadData("lastBriefDate", null);
-    if (last !== todayISO()) setShow(true);
-  }, []);
-  return [show, setShow];
+  return useState(true);
 }
