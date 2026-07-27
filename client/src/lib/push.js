@@ -32,3 +32,14 @@ export async function unsubscribeFromPush() {
   if (subscription) await subscription.unsubscribe();
   await removeSubscription();
 }
+
+// El servidor guarda la suscripción en un archivo (server/data/push-subscription.json) que
+// Render borra en cada redeploy — así que si el navegador ya tiene una suscripción activa
+// pero el permiso ya fue otorgado antes, la reenviamos sola al abrir la app. Así la
+// notificación diaria se "autocura" sin que Fernando tenga que volver a activar nada.
+export async function ensureSubscribed() {
+  if (!isPushSupported() || Notification.permission !== 'granted') return;
+  const registration = await navigator.serviceWorker.ready;
+  const subscription = await registration.pushManager.getSubscription();
+  if (subscription) await saveSubscription(subscription).catch(() => {});
+}

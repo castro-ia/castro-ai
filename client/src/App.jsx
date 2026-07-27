@@ -7,6 +7,7 @@ import Tasks from './pages/Tasks';
 import Settings from './pages/Settings';
 import MorningBrief, { useMorningBrief } from './components/MorningBrief';
 import { getCalendarToday } from './lib/api';
+import { ensureSubscribed } from './lib/push';
 
 export default function App() {
   const [showBrief, setShowBrief] = useMorningBrief();
@@ -18,6 +19,10 @@ export default function App() {
       .then((data) => setTodayEvents(data.events || []))
       .catch(() => setTodayEvents([]));
   }, [showBrief]);
+
+  useEffect(() => {
+    ensureSubscribed().catch(() => {});
+  }, []);
 
   return (
     <>

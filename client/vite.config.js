@@ -7,6 +7,10 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
+      // Registro manual en main.jsx (chequeo periódico + reload al detectar versión nueva) —
+      // con injectRegister:'auto' el script inyectado solo registra una vez al cargar y nunca
+      // vuelve a chequear, lo que dejaba la PWA en iOS mostrando versiones viejas.
+      injectRegister: null,
       strategies: 'injectManifest',
       srcDir: 'src',
       filename: 'sw.js',
